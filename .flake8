@@ -1,0 +1,4 @@
+[flake8]
+exclude =
+    letsencrypt/migrations/*,
+    letsencrypt/admin.py,
