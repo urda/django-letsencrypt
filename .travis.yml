@@ -1,0 +1,50 @@
+language: python
+
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev"
+  - "nightly"
+
+env:
+  DJANGO_VERSION=1.8.16
+  DJANGO_VERSION=1.9.11
+  DJANGO_VERSION=1.10.3
+
+branches:
+  only:
+    - master
+    - release
+
+before_install:
+  - echo Travis OS Name ... ${TRAVIS_OS_NAME}
+  - echo Travis Python .... ${TRAVIS_PYTHON_VERSION}
+  - echo Python Version ... $(python --version)
+  - echo Django Version ... ${DJANGO_VERSION}
+
+install:
+  - pip install --upgrade pip
+  - pip install -r requirements-travis.txt
+  - pip install -q Django==$DJANGO_VERSION
+
+script:
+  - make test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email: false
+  slack:
+    secure: >
+      IK9eYxJVo807pl9Nx7RLZ/Pic4kNOHWJ8yHF/FUd2hl4lr2DudAofsUZMwSZOPT8xVrTJvYhv6
+      7h88NwfvfEFkKhji6QZ6g5sl2HiyyzE8TYA/RvW8LsBWNwO02czODEKwtNwcGqncsftuCdcuMv
+      CMiwKW55UdvFSfefejTgLC5xQHdvhoku4zUKBQ1Wglv2E0YIzzCwtzLeScdmTsKjieGSX61X/b
+      p/4rosHYXQtLNP5TmUtccFmX0Sm6+SpIThVZznk3wOjWvpjX0yx5EDI9hQLTZHpMeK0JEhjbHj
+      6b5D+srtNlmzRUsiXAcnkzGMzdpXlGUcvPTF1iKM2RfIUAoNTkto2Ae4B3Dwwva93G+SpGqo5y
+      HZIZ7umo00zHyoNVvyQDJt7Ti1hNfXG5Oa5ROJ0Ns3704hH3XGqVG2EElQ7ny92Bp7uOyapiUA
+      jr0hIBL338wOhD8qNCgmKgljxfJ5o3ufqJvFl8ta1hG/+pBe12H/amV+BUua1tmbWnKzPjeaGU
+      /xeGjyHftigNQlTmiaf//yqBJeb5fYnyEmHiVQnSSOLjegvKd2Kp4Ys81cT9OkxonIpDDMKoOt
+      fwUDiNfrfZKz0MLyuglWeX/azKNTDdyzZhPvuPp5kK6KXxXVXVwKZshud8Md1gUHEft1xYuuyJ
+      KwBcCI8JZJkkdUfX8=
