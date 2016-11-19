@@ -1,2 +1,6 @@
 ### Python ###
 __pycache__/
+
+# Packaging
+dist/
+MANIFEST
