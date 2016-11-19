@@ -1,7 +1,6 @@
 language: python
 
 matrix:
-  fast_finish: true
   include:
   - python: "2.7"
     env: DJANGO_VERSION=1.8.16
@@ -44,11 +43,6 @@ matrix:
     env: DJANGO_VERSION=1.9.11
   - python: "nightly"
     env: DJANGO_VERSION=1.10.3
-
-  allow_failures:
-    - python: 3.5-dev
-    - python: 3.6-dev
-    - python: nightly
 
 branches:
   only:
