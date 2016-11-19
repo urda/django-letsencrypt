@@ -50,4 +50,5 @@ class AcmeChallengeAdmin(admin.ModelAdmin):
         'updated_ts',
     ]
 
+
 admin.site.register(AcmeChallenge, AcmeChallengeAdmin)
