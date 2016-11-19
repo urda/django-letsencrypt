@@ -1,16 +1,35 @@
 language: python
 
-python:
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.5-dev"
-  - "nightly"
+matrix:
+  fast_finish: true
+  include:
+  - python: "3.4"
+    env: DJANGO_VERSION=1.8.16
+  - python: "3.4"
+    env: DJANGO_VERSION=1.9.11
+  - python: "3.4"
+    env: DJANGO_VERSION=1.10.3
+  - python: "3.5"
+    env: DJANGO_VERSION=1.8.16
+  - python: "3.5"
+    env: DJANGO_VERSION=1.9.11
+  - python: "3.5"
+    env: DJANGO_VERSION=1.10.3
+  - python: "3.5-dev"
+    env: DJANGO_VERSION=1.8.16
+  - python: "3.5-dev"
+    env: DJANGO_VERSION=1.9.11
+  - python: "3.5-dev"
+    env: DJANGO_VERSION=1.10.3
+  - python: "nightly"
+    env: DJANGO_VERSION=1.8.16
+  - python: "nightly"
+    env: DJANGO_VERSION=1.9.11
+  - python: "nightly"
+    env: DJANGO_VERSION=1.10.3
 
-env:
-  DJANGO_VERSION=1.8.16
-  DJANGO_VERSION=1.9.11
-  DJANGO_VERSION=1.10.3
+  allow_failures:
+    - python: nightly
 
 branches:
   only:
