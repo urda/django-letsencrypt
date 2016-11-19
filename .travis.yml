@@ -21,6 +21,12 @@ matrix:
     env: DJANGO_VERSION=1.9.11
   - python: "3.5-dev"
     env: DJANGO_VERSION=1.10.3
+  - python: "3.6-dev"
+    env: DJANGO_VERSION=1.8.16
+  - python: "3.6-dev"
+    env: DJANGO_VERSION=1.9.11
+  - python: "3.6-dev"
+    env: DJANGO_VERSION=1.10.3
   - python: "nightly"
     env: DJANGO_VERSION=1.8.16
   - python: "nightly"
