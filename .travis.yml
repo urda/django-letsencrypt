@@ -46,6 +46,8 @@ matrix:
     env: DJANGO_VERSION=1.10.3
 
   allow_failures:
+    - python: 3.5-dev
+    - python: 3.6-dev
     - python: nightly
 
 branches:
