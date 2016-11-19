@@ -4,13 +4,13 @@ Let's Encrypt App for Django
 Quick Start
 -----------
 
-1. Add :code:`letsencrypt.apps.LetsEncryptConfig` to your :code:`INSTALLED_APPS`
+1. Add :code:`letsencrypt` to your :code:`INSTALLED_APPS`
 
 .. code:: python
 
     INSTALLED_APPS = [
         ... ,
-        'letsencrypt.apps.LetsEncryptConfig',
+        'letsencrypt',
         ... ,
     ]
 
