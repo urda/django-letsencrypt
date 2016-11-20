@@ -44,7 +44,7 @@ Quick Start
 5. Test your :code:`ACME Challenge` objects and their responses by visiting
    them:
 
-.. code:: none
+.. code::
 
     {Django Site}/.well-known/acme-challenge/challenge_text
 
