@@ -44,6 +44,8 @@ Quick Start
 5. Test your :code:`ACME Challenge` objects and their responses by visiting
    them:
 
+.. code:: none
+
     {Django Site}/.well-known/acme-challenge/challenge_text
 
 .. |MasterBuild| image:: https://travis-ci.org/urda/django-letsencrypt.svg?branch=master
