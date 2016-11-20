@@ -6,7 +6,7 @@ This Django app makes it easy to manage all of your
 :code:`django-letsencrypt` will add a simple model that you can manage through
 the :code:`django` admin interface. Simply add your :code:`ACME challenge` and
 :code:`response`, and your app will serve up the necessary URL for
-`Let's Encrypt<https://letsencrypt.org/how-it-works/>`_ validation.
+`Let\'s Encrypt <https://letsencrypt.org/how-it-works/>`_ validation.
 
 Quick Start
 -----------
