@@ -33,6 +33,9 @@ setup(
     url='https://github.com/urda/django-letsencrypt',
     author='Peter Urda',
     author_email='noreply@urda.cc',
+    install_requires=[
+        "Django>=1.8.16",
+    ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
