@@ -1,6 +1,14 @@
 Let's Encrypt App for Django
 ============================
 
++---------+-----------------+--------------------+
+| Branch  | Build Status    | Coverage Status    |
++=========+=================+====================+
+| Master  | |MasterBuild|_  | |MasterCoverage|_  |
++---------+-----------------+--------------------+
+| Release | |ReleaseBuild|_ | |ReleaseCoverage|_ |
++---------+-----------------+--------------------+
+
 This Django app makes it easy to manage all of your
 `ACME challenges <https://letsencrypt.github.io/acme-spec/>`_.
 :code:`django-letsencrypt` will add a simple model that you can manage through
@@ -37,17 +45,6 @@ Quick Start
    them:
 
     {Django Site}/.well-known/acme-challenge/challenge_text
-
-Project Health
-==============
-
-+---------+-----------------+--------------------+
-| Branch  | Build Status    | Coverage Status    |
-+=========+=================+====================+
-| Master  | |MasterBuild|_  | |MasterCoverage|_  |
-+---------+-----------------+--------------------+
-| Release | |ReleaseBuild|_ | |ReleaseCoverage|_ |
-+---------+-----------------+--------------------+
 
 .. |MasterBuild| image:: https://travis-ci.org/urda/django-letsencrypt.svg?branch=master
 .. _MasterBuild: https://travis-ci.org/urda/django-letsencrypt
