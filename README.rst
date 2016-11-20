@@ -7,11 +7,10 @@ Let's Encrypt App for Django
 .. image:: https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/urda/django-letsencrypt/branch/master
 
-This Django app makes it easy to manage all of your
-`ACME challenges <https://letsencrypt.github.io/acme-spec/>`_.
-:code:`django-letsencrypt` will add a simple model that you can manage through
-the :code:`django` admin interface. Simply add your :code:`ACME challenge` and
-:code:`response`, and your app will serve up the necessary URL for
+:code:`django-letsencrypt` will allow you to add, remove, and update any
+`ACME challenges <https://letsencrypt.github.io/acme-spec/>`_ objects you may
+need through your Django admin interface. Simply add the :code:`ACME challenge`
+and :code:`response`, and your app will serve up the necessary URL for
 `Let\'s Encrypt <https://letsencrypt.org/how-it-works/>`_ validation.
 
 Quick Start
@@ -28,11 +27,11 @@ Quick Start
     ]
 
 2. Included the :code:`letsencrypt` in your project's :code:`urls.py`,
-   or where applicable
+   or where applicable (usually your root :code:`urls.py`)
 
 .. code:: python
 
-    url(r'^.well-known/', include('letsencrypt.urls'))
+    url(r'^\.well-known/', include('letsencrypt.urls'))
 
 3. Run :code:`manage.py migrate` to create the required table for the
    :code:`letsencrypt` model

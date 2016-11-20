@@ -28,7 +28,7 @@ setup(
     packages=['letsencrypt'],
     include_package_data=True,
     license='Apache License, Version 2.0',
-    description="A Simple django app to handle Let's Encrypt ACME challenges.",
+    description="A simple Django app to handle Let's Encrypt ACME challenges.",
     long_description=README,
     url='https://github.com/urda/django-letsencrypt',
     author='Peter Urda',
