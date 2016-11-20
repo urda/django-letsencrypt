@@ -14,6 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
+from django.core.urlresolvers import (
+    reverse,
+    NoReverseMatch,
+)
 from django.db import models
 
 
@@ -35,3 +39,21 @@ class AcmeChallenge(models.Model):
 
     def __str__(self):
         return 'ACME Challenge "{}"'.format(self.challenge)
+
+    def get_acme_url(self):
+        """
+        Get the URL to this ACME challenge
+        :return: The URL as a string
+        """
+        try:
+            return reverse(
+                viewname='detail',
+                current_app='letsencrypt',
+                args=[self.challenge],
+            )
+        except NoReverseMatch:
+            return ''
+
+    class Meta:
+        verbose_name = 'ACME Challenge'
+        verbose_name_plural = 'ACME Challenges'

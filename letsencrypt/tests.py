@@ -22,6 +22,30 @@ from letsencrypt.models import AcmeChallenge
 class TestAcmeChallenge(TestCase):
     """Test the ACME Challenge model for Let's Encrypt"""
 
+    def test_acme_url(self):
+        """Test the django reverse() lookup for the ACME url"""
+        challenge = 'challenge-text-here'
+        response = ''
+        expected = '/acme-challenge/{}'.format(challenge)
+        acme_object = AcmeChallenge(
+            challenge=challenge,
+            response=response,
+        )
+
+        self.assertEqual(
+            acme_object.get_acme_url(),
+            expected,
+        )
+
+    def test_acme_url_no_reverse_match(self):
+        """Test an empty string for URL is returned on NoReverseMatch"""
+        acme_object = AcmeChallenge()
+
+        self.assertEqual(
+            acme_object.get_acme_url(),
+            '',
+        )
+
     def test_challenge(self):
         """Test the challenge data in the model"""
         challenge = 'challenge'
