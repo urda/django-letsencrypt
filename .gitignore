@@ -2,8 +2,10 @@
 __pycache__/
 
 # Packaging
-dist/
 MANIFEST
+
+*.egg-info/
+dist/
 
 # Testing
 .coverage
