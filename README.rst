@@ -1,13 +1,11 @@
 Let's Encrypt App for Django
 ============================
 
-+---------+-----------------+--------------------+
-| Branch  | Build Status    | Coverage Status    |
-+=========+=================+====================+
-| Master  | |MasterBuild|_  | |MasterCoverage|_  |
-+---------+-----------------+--------------------+
-| Release | |ReleaseBuild|_ | |ReleaseCoverage|_ |
-+---------+-----------------+--------------------+
+.. image:: https://travis-ci.org/urda/django-letsencrypt.svg?branch=master
+   :target: https://travis-ci.org/urda/django-letsencrypt
+
+.. image:: https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/urda/django-letsencrypt/branch/master
 
 This Django app makes it easy to manage all of your
 `ACME challenges <https://letsencrypt.github.io/acme-spec/>`_.
@@ -47,13 +45,3 @@ Quick Start
 .. code::
 
     {Django Site}/.well-known/acme-challenge/challenge_text
-
-.. |MasterBuild| image:: https://travis-ci.org/urda/django-letsencrypt.svg?branch=master
-.. _MasterBuild: https://travis-ci.org/urda/django-letsencrypt
-.. |MasterCoverage| image:: https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg
-.. _MasterCoverage: https://codecov.io/gh/urda/django-letsencrypt/branch/master
-
-.. |ReleaseBuild| image:: https://travis-ci.org/urda/django-letsencrypt.svg?branch=release
-.. _ReleaseBuild: https://travis-ci.org/urda/django-letsencrypt
-.. |ReleaseCoverage| image:: https://codecov.io/gh/urda/django-letsencrypt/branch/release/graph/badge.svg
-.. _ReleaseCoverage: https://codecov.io/gh/urda/django-letsencrypt/branch/release
