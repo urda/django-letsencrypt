@@ -34,8 +34,15 @@ class AcmeChallenge(models.Model):
         help_text='The response expected for this challenge',
     )
 
-    created_ts = models.DateTimeField(auto_now_add=True)
-    updated_ts = models.DateTimeField(auto_now=True)
+    created_ts = models.DateTimeField(
+        "Created Timestamp",
+        auto_now_add=True,
+    )
+
+    updated_ts = models.DateTimeField(
+        "Updated Timestamp",
+        auto_now=True,
+    )
 
     def __str__(self):
         return self.challenge
