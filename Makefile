@@ -10,6 +10,7 @@ test-unit:
 	coverage run \
 	--source="./letsencrypt" \
 	--omit="\
+	./letsencrypt/admin.py,\
 	./letsencrypt/tests.py,\
 	./letsencrypt/urls.py,\
 	./letsencrypt/views.py\
