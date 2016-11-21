@@ -38,7 +38,7 @@ class AcmeChallenge(models.Model):
     updated_ts = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return 'ACME Challenge "{}"'.format(self.challenge)
+        return self.challenge
 
     def get_acme_url(self):
         """

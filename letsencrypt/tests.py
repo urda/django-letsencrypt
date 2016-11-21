@@ -87,5 +87,5 @@ class TestAcmeChallenge(TestCase):
 
         self.assertEqual(
             str(acme_object),
-            'ACME Challenge "{}"'.format(challenge),
+            challenge,
         )
