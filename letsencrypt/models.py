@@ -28,6 +28,7 @@ class AcmeChallenge(models.Model):
 
     challenge = models.TextField(
         help_text='The identifier for this challenge',
+        unique=True,
     )
 
     response = models.TextField(
