@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Copyright 2016 Peter Urda
 
@@ -14,6 +16,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-__version__ = '1.0.2'
+import django
+from django.conf import settings
+from django.core.management import call_command
 
-default_app_config = 'letsencrypt.apps.LetsEncryptConfig'
+
+settings.configure(
+    DEBUG=True,
+    INSTALLED_APPS=(
+        'django.contrib.contenttypes',
+        'letsencrypt',
+    ),
+)
+
+
+if __name__ == '__main__':
+    django.setup()
+    call_command('makemigrations', 'letsencrypt')

@@ -14,6 +14,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-__version__ = '1.0.2'
 
-default_app_config = 'letsencrypt.apps.LetsEncryptConfig'
+from __future__ import unicode_literals
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+    dependencies = [
+        ('letsencrypt', '0002_remove_challenge_duplicates'),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='acmechallenge',
+            name='challenge',
+            field=models.TextField(
+                unique=True,
+                help_text='The identifier for this challenge'
+            ),
+        ),
+    ]
