@@ -1,5 +1,16 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.2
+
+- The `challenge` field has been made `unique` on `AcmeChallenge`
+  objects
+- Migrations added to this release
+  - A data migration will remove duplicate challenges in this release.
+    As with any Django migration, be sure to backup your database first.
+- Fixed issues:
+  - [GH-2](https://github.com/urda/django-letsencrypt/issues/2)
+  - [GH-4](https://github.com/urda/django-letsencrypt/issues/4)
+
 ## v1.0.1
 
 - Migrations added to this release
