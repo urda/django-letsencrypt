@@ -1,5 +1,9 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.3
+
+- Python 3.6 support
+
 ## v1.0.2
 
 - The `challenge` field has been made `unique` on `AcmeChallenge`
