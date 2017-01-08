@@ -1,3 +1,4 @@
 [flake8]
 exclude =
     letsencrypt/migrations/*,
+    scripts/version_manager.py,
