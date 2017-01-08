@@ -3,6 +3,7 @@
 ## v1.0.4
 
 - Bump YEAR in LICENSE
+- Rework some of the wording in the `README.rst`
 
 ## v1.0.3
 
