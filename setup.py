@@ -1,5 +1,5 @@
 """
-Copyright 2016 Peter Urda
+Copyright 2016-2017 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-letsencrypt',
-    version='1.0.3',
+    version='1.0.4',
     packages=['letsencrypt'],
     include_package_data=True,
     license='Apache License, Version 2.0',
@@ -45,6 +45,7 @@ setup(
         'Framework :: Django :: 1.10',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
+        'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',

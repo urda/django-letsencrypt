@@ -19,3 +19,7 @@ test-unit:
 	" \
 	runtests.py \
 	&& coverage report
+
+.PHONY: version-check
+version-check: # Verify the project version string is correct across the project
+	./scripts/version_manager.py check
