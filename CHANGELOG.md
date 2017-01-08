@@ -4,6 +4,7 @@
 
 - Bump YEAR in LICENSE
 - Rework some of the wording in the `README.rst`
+- Added `English` as a `Natural Language` `classifier`
 
 ## v1.0.3
 
