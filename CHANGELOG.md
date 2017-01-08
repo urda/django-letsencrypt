@@ -9,6 +9,7 @@
 - Internal Changes
   - Added a simple version manager script
   - Added version check to `make test`
+  - Bump `travis` tests for `1.10.4` to `1.10.5`
 
 ## v1.0.3
 
