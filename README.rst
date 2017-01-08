@@ -16,7 +16,7 @@ and :code:`response` for your app to serve up the necessary information for
 Installation & Configuration
 ----------------------------
 
-1. `pip install django-letsencrypt`
+1. :code:`pip install django-letsencrypt`
 
 2. Add :code:`letsencrypt` to your :code:`INSTALLED_APPS`
 
