@@ -1,5 +1,9 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.4
+
+- Bump YEAR in LICENSE
+
 ## v1.0.3
 
 - Python 3.6 support
