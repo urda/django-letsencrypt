@@ -1,5 +1,5 @@
 .PHONY: test
-test: version-check test-flake test-unit
+test: test-flake test-unit
 
 .PHONY: test-flake
 test-flake:
