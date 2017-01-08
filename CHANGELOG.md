@@ -5,7 +5,6 @@
 - Bump YEAR in LICENSE
 - Rework some of the wording in the `README.rst`
 - Added `English` as a `Natural Language` `classifier`
-
 - Internal Changes
   - Added a simple version manager script
   - Added version check to `make test`
