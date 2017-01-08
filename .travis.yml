@@ -51,7 +51,7 @@ install:
 
 script:
   - make test
-  - if [[ ${TRAVIS_PYTHON_VERSION} != 2.* ]]; then make version-check; else echo "version-check is Python 3 only"; fi
+  - if [[ ${TRAVIS_PYTHON_VERSION} != 2.* ]]; then make version-check; fi
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
