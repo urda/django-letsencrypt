@@ -1,5 +1,10 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.5
+
+- Internal Changes
+  - Start using `--sign`, such as: `python setup.py sdist upload --sign -r pypi`
+
 ## v1.0.4
 
 - Bump YEAR in LICENSE
