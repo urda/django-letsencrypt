@@ -1,5 +1,5 @@
 .PHONY: test
-test: test-flake test-unit
+test: version-check test-flake test-unit
 
 .PHONY: test-flake
 test-flake:
@@ -19,3 +19,7 @@ test-unit:
 	" \
 	runtests.py \
 	&& coverage report
+
+.PHONY: version-check
+version-check: # Verify the project version string is correct across the project
+	./scripts/version_manager.py check
