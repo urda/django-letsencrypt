@@ -30,7 +30,7 @@ DATABASES = {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'travis_ci_test',
             'USER': 'root',
-            'HOST': 'localhost'
+            'HOST': 'localhost',
         },
     },
 
