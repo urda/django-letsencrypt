@@ -22,6 +22,12 @@ env:
   - DJANGO_VERSION=1.10.5 DATABASE_ENGINE=postgres
   - DJANGO_VERSION=1.10.5 DATABASE_ENGINE=mysql
 
+matrix:
+  allow_failures:
+    - env: DJANGO_VERSION=1.8.17 DATABASE_ENGINE=mysql
+    - env: DJANGO_VERSION=1.9.12 DATABASE_ENGINE=mysql
+    - env: DJANGO_VERSION=1.10.5 DATABASE_ENGINE=mysql
+
 branches:
   only:
     - master
