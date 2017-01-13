@@ -1,37 +1,16 @@
 language: python
 
-matrix:
-  include:
-  - python: "2.7"
-    env: DJANGO_VERSION=1.8.17
-  - python: "2.7"
-    env: DJANGO_VERSION=1.9.12
-  - python: "2.7"
-    env: DJANGO_VERSION=1.10.5
+python:
+  - 2.7
+  - 3.4
+  - 3.5
+  - 3.6
+  - nightly
 
-  - python: "3.4"
-    env: DJANGO_VERSION=1.8.17
-  - python: "3.4"
-    env: DJANGO_VERSION=1.9.12
-  - python: "3.4"
-    env: DJANGO_VERSION=1.10.5
-
-  - python: "3.5"
-    env: DJANGO_VERSION=1.8.17
-  - python: "3.5"
-    env: DJANGO_VERSION=1.9.12
-  - python: "3.5"
-    env: DJANGO_VERSION=1.10.5
-
-  - python: "3.6"
-    env: DJANGO_VERSION=1.8.17
-  - python: "3.6"
-    env: DJANGO_VERSION=1.9.12
-  - python: "3.6"
-    env: DJANGO_VERSION=1.10.5
-
-  - python: "nightly"
-    env: DJANGO_VERSION=1.10.5
+env:
+  - DJANGO_VERSION=1.8.17
+  - DJANGO_VERSION=1.9.12
+  - DJANGO_VERSION=1.10.5
 
 branches:
   only:
