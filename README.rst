@@ -16,35 +16,35 @@ and :code:`response` for your app to serve up the necessary information for
 Installation & Configuration
 ----------------------------
 
-1. :code:`pip install django-letsencrypt`
+#. :code:`pip install django-letsencrypt`
 
-2. Add :code:`letsencrypt` to your :code:`INSTALLED_APPS`
+#. Add :code:`letsencrypt` to your :code:`INSTALLED_APPS`
 
-.. code:: python
+   .. code:: python
 
-    INSTALLED_APPS = [
-        ... ,
-        'letsencrypt',
-        ... ,
-    ]
+       INSTALLED_APPS = [
+           ... ,
+           'letsencrypt',
+           ... ,
+       ]
 
-3. Include the :code:`letsencrypt` in your project's :code:`urls.py`,
+#. Include the :code:`letsencrypt` in your project's :code:`urls.py`,
    or where applicable (usually your root :code:`urls.py`).
 
-.. code:: python
+   .. code:: python
 
-    url(r'^\.well-known/', include('letsencrypt.urls'))
+       url(r'^\.well-known/', include('letsencrypt.urls'))
 
-4. Run :code:`manage.py migrate` to create the required table for the
+#. Run :code:`manage.py migrate` to create the required table for the
    :code:`letsencrypt` model
 
-5. Create your :code:`ACME Challenge` objects in your Django admin interface
+#. Create your :code:`ACME Challenge` objects in your Django admin interface
 
-6. Test your :code:`ACME Challenge` objects and their responses by visiting
+#. Test your :code:`ACME Challenge` objects and their responses by visiting
    them:
 
-.. code::
+   .. code::
 
-    {Django Site}/.well-known/acme-challenge/challenge_text
+       {Django Site}/.well-known/acme-challenge/challenge_text
 
-7. Enjoy your easy to manage `ACME Challenges` inside your Django project!
+#. Enjoy your easy to manage `ACME Challenges` inside your Django project!
