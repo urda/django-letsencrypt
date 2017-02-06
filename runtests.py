@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright 2016 Peter Urda
+Copyright 2016-2017 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
+import os
 import sys
 
 import django
@@ -23,12 +24,36 @@ from django.conf import settings
 from django.test.runner import DiscoverRunner
 
 
-settings.configure(
-    DATABASES={
-      'default': {
-          'ENGINE': 'django.db.backends.sqlite3',
-      }
+DATABASES = {
+    'mysql': {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'travis_ci_test',
+            'USER': 'root',
+            'HOST': 'localhost',
+        },
     },
+
+    'postgres': {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'travis_ci_test',
+            'USER': 'postgres',
+            'HOST': 'localhost',
+        },
+    },
+
+    'sqlite': {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+        },
+    },
+}
+
+DATABASE_ENGINE = os.getenv('DATABASE_ENGINE', default='sqlite')
+
+settings.configure(
+    DATABASES=DATABASES.get(DATABASE_ENGINE, DATABASES['sqlite']),
     DEBUG=True,
     INSTALLED_APPS=(
         'django.contrib.auth',
