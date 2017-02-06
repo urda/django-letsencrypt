@@ -19,8 +19,6 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('challenge', models.CharField(help_text='The identifier for this challenge', max_length=255, unique=True)),
                 ('response', models.CharField(help_text='The response expected for this challenge', max_length=255)),
-                ('created_ts', models.DateTimeField(auto_now_add=True, verbose_name='Created Timestamp')),
-                ('updated_ts', models.DateTimeField(auto_now=True, verbose_name='Updated Timestamp')),
             ],
             options={
                 'verbose_name': 'ACME Challenge',
