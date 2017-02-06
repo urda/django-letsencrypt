@@ -36,7 +36,7 @@ matrix:
 branches:
   only:
     - master
-    - release
+    - develop
 
 before_install:
   - echo Travis OS Name ... ${TRAVIS_OS_NAME}
@@ -46,7 +46,7 @@ before_install:
 
 install:
   - pip install --upgrade pip
-  - pip install -r requirements-travis.txt
+  - pip install -r requirements.txt
   - pip install Django==$DJANGO_VERSION
 
 script:
