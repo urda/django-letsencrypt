@@ -5,14 +5,12 @@ from __future__ import unicode_literals
 from django.db import (
     connection,
     migrations,
-    models,
 )
 
 
 ORIGINAL_NAME = 'AcmeChallenge'
 ORIGINAL_TABLE = 'letsencrypt_acmechallenge'
 MIGRATION_NAME = 'AcmeChallengeMigrationModel'
-MIGRATION_TABLE = 'letsencrypt_acmechallengemigrationmodel'
 
 
 def table_exists(target_table):
@@ -34,31 +32,6 @@ def table_exists(target_table):
         )
 
 
-def migrate_data_if_migration_table(apps, schema_editor):
-    """Reload the old data into the new model"""
-    if table_exists(MIGRATION_TABLE):
-        # Load Data
-        with connection.cursor() as cursor:
-            # Get the current model
-            acme_challenge = apps.get_model("letsencrypt", ORIGINAL_NAME)
-
-            # Get the migration rows
-            cursor.execute(
-                "SELECT challenge, response FROM %s", [MIGRATION_TABLE]
-            )
-
-            # And migrate the data
-            for row in cursor:
-                migration_entry = acme_challenge(
-                    challenge=row[0],
-                    response=row[1],
-                )
-                migration_entry.save()
-
-        # Delete Migration model
-        migrations.DeleteModel(MIGRATION_NAME)
-
-
 def move_existing_table(apps, schema_editor):
     """Move the existing ACME table if exists"""
     if table_exists(ORIGINAL_TABLE):
@@ -74,17 +47,4 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(move_existing_table, reverse_code=None),
-        migrations.CreateModel(
-            name='AcmeChallenge',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('challenge', models.CharField(help_text='The identifier for this challenge', max_length=255, unique=True)),
-                ('response', models.CharField(help_text='The response expected for this challenge', max_length=255)),
-            ],
-            options={
-                'verbose_name': 'ACME Challenge',
-                'verbose_name_plural': 'ACME Challenges',
-            },
-        ),
-        migrations.RunPython(migrate_data_if_migration_table, reverse_code=None),
     ]
