@@ -1,5 +1,12 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.7
+
+- Project changes
+  - Final "feature" release of the 1.x branch. 2.0 will support `mysql`.
+    This had to be done due to certain model upcoming model changes, and
+    will result in a new set of migrations.
+
 ## v1.0.6
 
 - Internal Changes
