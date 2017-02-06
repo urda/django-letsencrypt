@@ -1,4 +1,5 @@
 [flake8]
 exclude =
+    build/*,
     letsencrypt/migrations/*,
     scripts/version_manager.py,

@@ -5,6 +5,33 @@ help: # Show this help screen
 	awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 
+.PHONY: build
+build: test clean build-package # Clean, Test, and Build the package
+
+
+.PHONY: build-package
+build-package: # Build 'sdist' and 'bdist_wheel' for this package
+	python setup.py sdist bdist_wheel
+
+
+.PHONY: clean
+clean: # Clean up build, test, and other project artifacts
+	rm -rf \
+	./.cache \
+	./*.egg-info \
+	./build \
+	./dist \
+	./htmlcov \
+	.coverage \
+	coverage.xml \
+	&& :
+
+
+.PHONY: publish
+publish: build # Build, sign, and publish the package
+	twine upload dist/* --sign -r pypi
+
+
 .PHONY: test
 test: test-flake test-unit # Run the full testing suite
 
