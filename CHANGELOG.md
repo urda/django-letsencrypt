@@ -1,5 +1,11 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.6
+
+- Internal Changes
+  - Started using `twine`
+  - Started uploading `bdist_wheel`
+
 ## v1.0.5
 
 - Internal Changes
