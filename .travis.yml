@@ -1,6 +1,7 @@
 language: python
 
 services:
+  - mysql
   - postgresql
 
 python:
@@ -13,10 +14,13 @@ python:
 env:
   - DJANGO_VERSION=1.8.17 DATABASE_ENGINE=sqlite
   - DJANGO_VERSION=1.8.17 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=1.8.17 DATABASE_ENGINE=mysql
   - DJANGO_VERSION=1.9.12 DATABASE_ENGINE=sqlite
   - DJANGO_VERSION=1.9.12 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=1.9.12 DATABASE_ENGINE=mysql
   - DJANGO_VERSION=1.10.5 DATABASE_ENGINE=sqlite
   - DJANGO_VERSION=1.10.5 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=1.10.5 DATABASE_ENGINE=mysql
 
 branches:
   only:
@@ -38,6 +42,12 @@ install:
   - pip install Django==$DJANGO_VERSION
 
 before_script:
+  - sh -c "
+    if [ '${DATABASE_ENGINE}' = 'mysql' ];
+    then
+      pip install mysqlclient;
+      mysql -e 'CREATE DATABASE travis_ci_test;';
+    fi"
   - sh -c "
     if [ '${DATABASE_ENGINE}' = 'postgres' ];
     then

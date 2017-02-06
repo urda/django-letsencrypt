@@ -25,6 +25,15 @@ from django.test.runner import DiscoverRunner
 
 
 DATABASES = {
+    'mysql': {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'travis_ci_test',
+            'USER': 'root',
+            'HOST': 'localhost',
+        },
+    },
+
     'postgres': {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
