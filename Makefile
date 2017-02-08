@@ -24,6 +24,8 @@ clean: # Clean up build, test, and other project artifacts
 	./htmlcov \
 	.coverage \
 	coverage.xml \
+	&& \
+	find . | grep -E "(__pycache__|\.pyc|\.pyo$$)" | xargs rm -rf \
 	&& :
 
 

@@ -22,7 +22,8 @@ branches:
   only:
     - master
     - develop
-    - /^release\/.$*/
+    - /^release\/.*$/
+    - /^support\/.*$/
 
 before_install:
   - echo Travis OS Name ... ${TRAVIS_OS_NAME}
