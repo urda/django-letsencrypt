@@ -1,8 +1,14 @@
 # django-letsencrypt CHANGELOG
 
+## v1.0.8
+
+- Project Changes
+  - Require `pytz` for SQLite users.
+  - Update `travis` branch build targets.
+
 ## v1.0.7
 
-- Project changes
+- Project Changes
   - Final "feature" release of the 1.x branch. 2.0 will support `mysql`.
     This had to be done due to certain model upcoming model changes, and
     will result in a new set of migrations.
