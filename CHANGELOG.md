@@ -1,5 +1,7 @@
 # django-letsencrypt CHANGELOG
 
+## v1.1.0
+
 ## v1.0.8
 
 - Project Changes
