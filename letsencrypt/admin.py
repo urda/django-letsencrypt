@@ -47,23 +47,14 @@ class AcmeChallengeAdmin(admin.ModelAdmin):
             'fields': [
                 'id',
                 'format_acme_url',
-                'created_ts',
-                'updated_ts',
             ],
         }),
     ]
-
-    date_hierarchy = 'created_ts'
 
     list_display = (
         'challenge',
         'format_acme_url',
     )
-
-    list_filter = [
-        'created_ts',
-        'updated_ts',
-    ]
 
     ordering = (
         'challenge',
@@ -71,8 +62,6 @@ class AcmeChallengeAdmin(admin.ModelAdmin):
 
     readonly_fields = [
         'id',
-        'created_ts',
-        'updated_ts',
         'format_acme_url',
     ]
 
