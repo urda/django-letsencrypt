@@ -1,5 +1,7 @@
 [flake8]
 exclude =
     build/*,
+    example_project/example_project/settings.py,
+    example_project/manage.py,
     letsencrypt/migrations/*,
     scripts/version_manager.py,

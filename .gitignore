@@ -1,3 +1,8 @@
+### Project ###
+
+# Ignore local database file from example
+example_project/db.sqlite3
+
 ### Python ###
 __pycache__/
 *.py[cod]
