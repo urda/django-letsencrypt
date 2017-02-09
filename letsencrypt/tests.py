@@ -26,7 +26,7 @@ class TestAcmeChallenge(TestCase):
         """Test the django reverse() lookup for the ACME url"""
         challenge = 'challenge-text-here'
         response = ''
-        expected = '/acme-challenge/{}'.format(challenge)
+        expected = '/.well-known/acme-challenge/{}'.format(challenge)
         acme_object = AcmeChallenge(
             challenge=challenge,
             response=response,
