@@ -1,5 +1,16 @@
 # django-letsencrypt CHANGELOG
 
+## v1.1.0
+
+- Project Changes
+  - Added tests for the `detail` view
+  - Made Django admin page sort by `challenge`
+
+- Model Changes
+  - Migrate from `TextField` to `CharField` on ACME Model
+  - Remove the `created_ts` and `updated_ts` fields on ACME Model
+  - Generate a `squashed` migration for future MySQL support
+
 ## v1.0.8
 
 - Project Changes
