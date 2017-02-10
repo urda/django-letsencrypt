@@ -53,9 +53,9 @@ test-unit: # Run only unit tests
 	./letsencrypt/apps.py,\
 	./letsencrypt/tests.py,\
 	./letsencrypt/urls.py,\
-	./letsencrypt/views.py\
 	" \
-	runtests.py \
+	example_project/manage.py test \
+	--settings=example_project.settings_test \
 	&& coverage report
 
 
