@@ -65,6 +65,10 @@ class AcmeChallengeAdmin(admin.ModelAdmin):
         'updated_ts',
     ]
 
+    ordering = (
+        'challenge',
+    )
+
     readonly_fields = [
         'id',
         'created_ts',
