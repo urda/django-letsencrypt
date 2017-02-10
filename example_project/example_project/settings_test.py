@@ -22,6 +22,15 @@ from .settings import *  # noqa
 DATABASE_ENGINE = os.getenv('DATABASE_ENGINE', default='sqlite')
 
 TEST_DATABASES = {
+    'mysql': {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'travis_ci_test',
+            'USER': 'root',
+            'HOST': 'localhost',
+        },
+    },
+
     'postgres': {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
