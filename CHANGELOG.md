@@ -2,6 +2,9 @@
 
 ## v1.1.0
 
+- Project Changes
+  - Admin `ordering` for the Django admin page is now down by `challenge`
+
 ## v1.0.8
 
 - Project Changes
