@@ -4,6 +4,8 @@
 
 - Project Changes
   - Admin `ordering` for the Django admin page is now down by `challenge`
+- Internal Changes
+  - Removed `migrations.py` thanks to existing `example_project`'s manage.py
 
 ## v1.0.8
 
