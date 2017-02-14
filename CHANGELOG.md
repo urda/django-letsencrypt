@@ -1,5 +1,15 @@
 # django-letsencrypt CHANGELOG
 
+## v1.1.0
+
+- Project Changes
+  - Admin `ordering` for the Django admin page is now down by `challenge`
+  - Removed `created_ts` and `updated_ts` from model
+  - Switched `challenge` and `response` from `TextField` to `CharField`
+- Internal Changes
+  - Added testing for `detail` view for `ACME` objects
+  - Removed `migrations.py` thanks to existing `example_project`'s manage.py
+
 ## v1.0.8
 
 - Project Changes

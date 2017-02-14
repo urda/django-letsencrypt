@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>django-letsencrypt Example Project</title>
+</head>
+
+<body>
+  <h1>'django-letsencrypt' Example Project</h1>
+
+  <h2>Project Admin Links</h2>
+  <ul>
+    <li><a href="{% url 'admin:index' %}">Django Admin</a></li>
+    <li>
+      <a href="{% url 'admin:letsencrypt_acmechallenge_add' %}">
+        Add New Challenge
+      </a>
+    </li>
+  </ul>
+
+  <h2>Most recent challenges added</h2>
+  <ul>
+  {% if challenges %}
+    {% for challenge in challenges %}
+    <li>
+      {{ challenge.challenge }}
+      -
+      <a href="{{ challenge.get_acme_url }}">ACME Challenge Link</a>
+      -
+      <a href="{% url 'admin:letsencrypt_acmechallenge_change' challenge.id %}">
+        Edit
+      </a>
+      -
+      <a href="{% url 'admin:letsencrypt_acmechallenge_delete' challenge.id %}">
+        Delete
+      </a>
+    </li>
+    {% endfor %}
+  {% else %}
+    <li>No challenges in database!</li>
+  {% endif %}
+
+  </ul>
+</body>
+
+</html>

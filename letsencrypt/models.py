@@ -26,23 +26,15 @@ class AcmeChallenge(models.Model):
     Simple model to handle Let's Encrypt .well-known/acme-challenge objects
     """
 
-    challenge = models.TextField(
+    challenge = models.CharField(
         help_text='The identifier for this challenge',
         unique=True,
+        max_length=255,
     )
 
-    response = models.TextField(
+    response = models.CharField(
         help_text='The response expected for this challenge',
-    )
-
-    created_ts = models.DateTimeField(
-        "Created Timestamp",
-        auto_now_add=True,
-    )
-
-    updated_ts = models.DateTimeField(
-        "Updated Timestamp",
-        auto_now=True,
+        max_length=255,
     )
 
     def __str__(self):

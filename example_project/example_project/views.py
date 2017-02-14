@@ -1,5 +1,5 @@
 """
-Copyright 2016-2017 Peter Urda
+Copyright 2017 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,6 +14,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-__version__ = '1.1.0'
+from django.views import generic
 
-default_app_config = 'letsencrypt.apps.LetsEncryptConfig'
+from letsencrypt.models import AcmeChallenge
+
+
+class ExampleProjectHomeView(generic.ListView):
+    template_name = 'example_project/index.html'
+    context_object_name = 'challenges'
+
+    def get_queryset(self):
+        return AcmeChallenge.objects.all().order_by('id')[:5]
