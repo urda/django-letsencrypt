@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
+
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from .models import AcmeChallenge
@@ -24,5 +25,5 @@ def detail(request, acme_data):
         AcmeChallenge,
         challenge=acme_data,
     )
-    
+
     return HttpResponse(acme_challenge.response, content_type="text/plain")

@@ -106,8 +106,8 @@ class TestAcmeChallengeViews(TestCase):
 
         self.expected_challenge = 'challenge_view_test'
         self.expected_response = 'challenge_view_test_response'
-        self.expected_response_bytes = b'challenge_view_test_response\n'
-        self.expected_response_decode = 'challenge_view_test_response\n'
+        self.expected_response_bytes = b'challenge_view_test_response'
+        self.expected_response_decode = 'challenge_view_test_response'
 
         self.test_challenge = AcmeChallenge.objects.create(
             challenge=self.expected_challenge,
