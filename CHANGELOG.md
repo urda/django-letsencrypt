@@ -1,5 +1,18 @@
 # django-letsencrypt CHANGELOG
 
+## v1.1.1
+
+- Internal Changes
+  - Removed the need to render `ACME` responses through a template. Instead
+    responses are now passed through a `HttpResponse` with a `content_type` of
+    `text/plain`. Thanks to [Peter Curet](https://github.com/petercuret)
+    for providing a pull request.
+    - [GH-29](https://github.com/urda/django-letsencrypt/pull/29)
+    - [GH-30](https://github.com/urda/django-letsencrypt/pull/30)
+- Corrected `Copyright` dates across the project
+- Thanks to Contributors:
+  - [Peter Curet](https://github.com/petercuret)
+
 ## v1.1.0
 
 - Project Changes
