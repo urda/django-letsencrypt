@@ -34,7 +34,7 @@ setup(
     author='Peter Urda',
     author_email='noreply@urda.cc',
     install_requires=[
-        "Django>=1.8.17",
+        "Django>=1.8.17,!=1.9.*",
         "pytz>=2016.10",
     ],
     classifiers=[
@@ -42,7 +42,6 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
