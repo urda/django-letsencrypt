@@ -7,6 +7,7 @@
     to fix any issues that may arise from using `django-letsencrypt` with
     `1.9`.
 - Internal Changes
+  - `django-letsencrypt` now supports Django `1.11`.
   - Removed `squashed` migrations from the project. **PLEASE NOTE:** If you
     are on an older `v1.x` release of this project, please make sure to
     **UPGRADE** to `v1.1.1` and **migrate** your database. Failure to do so
