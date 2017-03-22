@@ -11,13 +11,6 @@ from django.db import (
 
 class Migration(migrations.Migration):
 
-    replaces = [
-        ('letsencrypt', '0001_initial'),
-        ('letsencrypt', '0002_remove_challenge_duplicates'),
-        ('letsencrypt', '0003_make_challenge_unique'),
-        ('letsencrypt', '0004_text_to_char__remove_ts_fields'),
-    ]
-
     initial = True
 
     dependencies = [
