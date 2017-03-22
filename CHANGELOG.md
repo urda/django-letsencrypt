@@ -1,5 +1,14 @@
 # django-letsencrypt CHANGELOG
 
+## v2.0.0
+
+- Internal Changes
+  - Removed `squashed` migrations from the project. **PLEASE NOTE:** If you
+    are on an older `v1.x` release of this project, please make sure to
+    **UPGRADE** to `v1.1.1` and **migrate** your database. Failure to do so
+    will cause a lot of problems, since this release **only** has the single
+    migration file.
+
 ## v1.1.1
 
 - Internal Changes
