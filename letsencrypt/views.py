@@ -1,5 +1,5 @@
 """
-Copyright 2016 Peter Urda
+Copyright 2016-2017 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,10 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from django.shortcuts import (
-    get_object_or_404,
-    render,
-)
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 
 from .models import AcmeChallenge
 
@@ -28,10 +26,4 @@ def detail(request, acme_data):
         challenge=acme_data,
     )
 
-    return render(
-        request,
-        'letsencrypt/detail.html',
-        {
-            'response': acme_challenge.response
-        },
-    )
+    return HttpResponse(acme_challenge.response, content_type="text/plain")
