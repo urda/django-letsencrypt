@@ -8,6 +8,10 @@
     `1.9`.
 - Internal Changes
   - `django-letsencrypt` now supports Django `1.11`.
+  - Updated builds to use the latest `1.8`, `1.10` releases.
+  - Bumped to the latest `pytz`, version `2017.2`.
+  - Updated `setup.py` marking any Django `1.9` releases as incompatible.
+  - Removed Python `nightly` from Travis builds and testing.
   - Removed `squashed` migrations from the project. **PLEASE NOTE:** If you
     are on an older `v1.x` release of this project, please make sure to
     **UPGRADE** to `v1.1.1` and **migrate** your database. Failure to do so
