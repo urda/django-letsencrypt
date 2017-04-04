@@ -2,6 +2,10 @@
 
 ## v2.0.0
 
+- Breaking Changes
+  - Django `1.9` support has been dropped. There will be no further updates
+    to fix any issues that may arise from using `django-letsencrypt` with
+    `1.9`.
 - Internal Changes
   - Removed `squashed` migrations from the project. **PLEASE NOTE:** If you
     are on an older `v1.x` release of this project, please make sure to
