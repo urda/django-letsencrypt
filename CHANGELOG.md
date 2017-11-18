@@ -2,7 +2,8 @@
 
 ## v2.0.1
 
--
+- Internal Changes
+  - Bumped `DJANGO_VERSION` targets in `.travis.yml`.
 
 ## v2.0.0
 
