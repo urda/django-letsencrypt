@@ -4,6 +4,7 @@
 
 - Internal Changes
   - Bumped `DJANGO_VERSION` targets in `.travis.yml`.
+  - Bumped to the latest `pytz`, version `2017.3`.
 
 ## v2.0.0
 
