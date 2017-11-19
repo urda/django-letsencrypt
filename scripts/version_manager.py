@@ -199,6 +199,7 @@ if __name__ == '__main__':
 
     understood_commands = [
         'check',
+        'get-version-only',
         'update',
     ]
 
@@ -227,6 +228,14 @@ if __name__ == '__main__':
             print(warning_version_mismatch)
             print(warning_banner)
             sys.exit(1)
+
+    elif args.command == "get-version-only":
+        version_data = get_versions()
+
+        if not version_data.uniform:
+            sys.exit(1)
+
+        print(version_data.version_result)
 
     elif args.command == "update":
         new_version_str = input('New version string > ')
