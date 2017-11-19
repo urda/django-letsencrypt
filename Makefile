@@ -6,7 +6,7 @@ help: # Show this help screen
 
 
 .PHONY: build
-build: test clean build-package # Clean, Test, and Build the package
+build: clean test build-package # Clean, Test, and Build the package
 
 
 .PHONY: build-package
@@ -20,7 +20,6 @@ clean: # Clean up build, test, and other project artifacts
 	./.cache \
 	./*.egg-info \
 	./build \
-	./dist \
 	./htmlcov \
 	.coverage \
 	coverage.xml \
