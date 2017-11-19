@@ -1,4 +1,11 @@
 ########################################################################################################################
+# Variables
+########################################################################################################################
+
+BETA_DIST = ./beta_dist
+GPG_ID = CA0B97334F9449EB5AFFCB93240BD54D194E3161
+
+########################################################################################################################
 # `make help` Needs to be first so it is ran when just `make` is called
 ########################################################################################################################
 
@@ -9,6 +16,36 @@ help: # Show this help screen
 	sort -k1,1 |\
 	awk 'BEGIN {FS = ":.*?# "}; {printf "\033[1m%-30s\033[0m %s\n", $$1, $$2}'
 
+
+########################################################################################################################
+# Project Publishing
+########################################################################################################################
+
+
+.PHONY: test-publish
+test-publish: build-beta # Publish to testpypi
+	twine upload --repository testpypi --sign --identity $(GPG_ID) $(BETA_DIST)/*
+
+
+########################################################################################################################
+# Project Building
+########################################################################################################################
+
+.PHONY: build-beta
+build-beta: build-pre build-beta-package # Build the beta package
+
+#---------------------------------------------------------------------------------------------------
+# Beta Build Subcommands (Test PyPi)
+#---------------------------------------------------------------------------------------------------
+
+# Build 'sdist' and 'bdist_wheel' for the beta package
+.PHONY: build-beta-package
+build-beta-package:
+	./scripts/version_manager.py set-beta-build && \
+	./scripts/version_manager.py check && \
+	python setup.py sdist --dist-dir $(BETA_DIST) bdist_wheel --dist-dir $(BETA_DIST) && \
+	./scripts/version_manager.py unset-beta-build && \
+	:
 
 ########################################################################################################################
 # Unsorted Targets
@@ -32,6 +69,7 @@ clean: # Clean up build, test, and other project artifacts
 	rm -rf \
 	./.cache \
 	./*.egg-info \
+	$(BETA_DIST) \
 	./build \
 	./htmlcov \
 	.coverage \
