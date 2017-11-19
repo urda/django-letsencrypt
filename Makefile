@@ -6,12 +6,16 @@ help: # Show this help screen
 
 
 .PHONY: build
-build: clean test build-package # Clean, Test, and Build the package
+build: build-pre build-package # Build the release package
 
 
 .PHONY: build-package
 build-package: # Build 'sdist' and 'bdist_wheel' for this package
 	python setup.py sdist bdist_wheel
+
+
+.PHONY: build-pre
+build-pre: clean version-check test # Perform required pre-build steps
 
 
 .PHONY: clean
