@@ -202,6 +202,9 @@ if __name__ == '__main__':
         'update',
     ]
 
+    warning_banner = "/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\"
+    warning_version_mismatch = "Versions DO NOT MATCH across the project!"
+
     sp = parser.add_subparsers(dest="command")
     for command in understood_commands:
         sp.add_parser(command)
@@ -220,9 +223,9 @@ if __name__ == '__main__':
             print("Versions look OK across the project")
             print("Version is '{}'".format(version_data.version_result))
         else:
-            print("/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\")
-            print("Versions DO NOT MATCH across the project!")
-            print("/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\/!\\")
+            print(warning_banner)
+            print(warning_version_mismatch)
+            print(warning_banner)
             sys.exit(1)
 
     elif args.command == "update":
