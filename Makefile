@@ -25,8 +25,12 @@ help: # Show this help screen
 
 
 .PHONY: test
-test: version-check test-flake test-unit # Run the full testing suite
+test: test-flake test-unit # Run the full testing suite
 
+
+.PHONY: version-check
+version-check: # Verify the project version string is correct across the project
+	./scripts/version_manager.py check
 
 #---------------------------------------------------------------------------------------------------
 # Test Subcommands
@@ -54,12 +58,6 @@ test-unit:
 	example_project/manage.py test \
 	--settings=example_project.settings_test \
 	&& coverage report
-
-
-# Verify the project version string is correct across the project
-.PHONY: version-check
-version-check:
-	./scripts/version_manager.py check
 
 
 ########################################################################################################################
