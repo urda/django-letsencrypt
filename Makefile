@@ -3,6 +3,7 @@
 ########################################################################################################################
 
 BETA_DIST = ./beta_dist
+DIST = ./dist
 GPG_ID = CA0B97334F9449EB5AFFCB93240BD54D194E3161
 
 ########################################################################################################################
@@ -67,7 +68,7 @@ version-check:
 
 .PHONY: publish
 publish: build # Build, sign, and publish the package to PyPi
-	twine upload dist/* --sign -r pypi
+	twine upload --repository pypi --sign --identity $(GPG_ID) $(DIST)/*
 
 
 .PHONY: test-publish
@@ -93,6 +94,7 @@ clean: # Clean up build, test, and other project artifacts
 	rm -rf \
 	./.cache \
 	./*.egg-info \
+	$(DIST) \
 	$(BETA_DIST) \
 	./build \
 	./htmlcov \
@@ -120,7 +122,7 @@ build-pre: clean test
 # Build 'sdist' and 'bdist_wheel' for this package
 .PHONY: build-package
 build-package:
-	python setup.py sdist bdist_wheel
+	python setup.py sdist --dist-dir $(DIST) bdist_wheel --dist-dir $(DIST)
 
 
 #---------------------------------------------------------------------------------------------------
