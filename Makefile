@@ -109,7 +109,7 @@ clean: # Clean up build, test, and other project artifacts
 
 # Perform required pre-build steps for all build types
 .PHONY: build-pre
-build-pre: clean version-check test
+build-pre: clean test
 
 
 #---------------------------------------------------------------------------------------------------
