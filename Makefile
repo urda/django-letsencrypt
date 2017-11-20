@@ -18,12 +18,60 @@ help: # Show this help screen
 
 
 ########################################################################################################################
+# Testing
+########################################################################################################################
+
+
+.PHONY: test
+test: version-check test-flake test-unit # Run the full testing suite
+
+
+#---------------------------------------------------------------------------------------------------
+# Test Subcommands
+#---------------------------------------------------------------------------------------------------
+
+
+# Run flake8 against project files
+.PHONY: test-flake
+test-flake:
+	flake8 -v
+
+
+# Run only unit tests
+.PHONY: test-unit
+test-unit:
+	coverage run \
+	--source="./letsencrypt" \
+	--omit="\
+	./letsencrypt/migrations/*,\
+	./letsencrypt/admin.py,\
+	./letsencrypt/apps.py,\
+	./letsencrypt/tests.py,\
+	./letsencrypt/urls.py,\
+	" \
+	example_project/manage.py test \
+	--settings=example_project.settings_test \
+	&& coverage report
+
+
+# Verify the project version string is correct across the project
+.PHONY: version-check
+version-check:
+	./scripts/version_manager.py check
+
+
+########################################################################################################################
 # Project Publishing
 ########################################################################################################################
 
 
+.PHONY: publish
+publish: build # Build, sign, and publish the package to PyPi
+	twine upload dist/* --sign -r pypi
+
+
 .PHONY: test-publish
-test-publish: build-beta # Publish to testpypi
+test-publish: build-beta # Build, sign, and publish the package to TestPyPi
 	twine upload --repository testpypi --sign --identity $(GPG_ID) $(BETA_DIST)/*
 
 
@@ -31,37 +79,13 @@ test-publish: build-beta # Publish to testpypi
 # Project Building
 ########################################################################################################################
 
-.PHONY: build-beta
-build-beta: build-pre build-beta-package # Build the beta package
-
-#---------------------------------------------------------------------------------------------------
-# Beta Build Subcommands (Test PyPi)
-#---------------------------------------------------------------------------------------------------
-
-# Build 'sdist' and 'bdist_wheel' for the beta package
-.PHONY: build-beta-package
-build-beta-package:
-	./scripts/version_manager.py set-beta-build && \
-	./scripts/version_manager.py check && \
-	python setup.py sdist --dist-dir $(BETA_DIST) bdist_wheel --dist-dir $(BETA_DIST) && \
-	./scripts/version_manager.py unset-beta-build && \
-	:
-
-########################################################################################################################
-# Unsorted Targets
-########################################################################################################################
 
 .PHONY: build
 build: build-pre build-package # Build the release package
 
 
-.PHONY: build-package
-build-package: # Build 'sdist' and 'bdist_wheel' for this package
-	python setup.py sdist bdist_wheel
-
-
-.PHONY: build-pre
-build-pre: clean version-check test # Perform required pre-build steps
+.PHONY: build-beta
+build-beta: build-pre build-beta-package # Build the beta package
 
 
 .PHONY: clean
@@ -78,37 +102,37 @@ clean: # Clean up build, test, and other project artifacts
 	find . | grep -E "(__pycache__|\.pyc|\.pyo$$)" | xargs rm -rf \
 	&& :
 
-
-.PHONY: publish
-publish: build # Build, sign, and publish the package
-	twine upload dist/* --sign -r pypi
-
-
-.PHONY: test
-test: test-flake test-unit # Run the full testing suite
+#---------------------------------------------------------------------------------------------------
+# Build Subcommands
+#---------------------------------------------------------------------------------------------------
 
 
-.PHONY: test-flake
-test-flake: # Run flake8 against project files
-	flake8 -v
+# Perform required pre-build steps for all build types
+.PHONY: build-pre
+build-pre: clean version-check test
 
 
-.PHONY: test-unit
-test-unit: # Run only unit tests
-	coverage run \
-	--source="./letsencrypt" \
-	--omit="\
-	./letsencrypt/migrations/*,\
-	./letsencrypt/admin.py,\
-	./letsencrypt/apps.py,\
-	./letsencrypt/tests.py,\
-	./letsencrypt/urls.py,\
-	" \
-	example_project/manage.py test \
-	--settings=example_project.settings_test \
-	&& coverage report
+#---------------------------------------------------------------------------------------------------
+# Build Subcommands (PyPi)
+#---------------------------------------------------------------------------------------------------
 
 
-.PHONY: version-check
-version-check: # Verify the project version string is correct across the project
-	./scripts/version_manager.py check
+# Build 'sdist' and 'bdist_wheel' for this package
+.PHONY: build-package
+build-package:
+	python setup.py sdist bdist_wheel
+
+
+#---------------------------------------------------------------------------------------------------
+# Beta Build Subcommands (Test PyPi)
+#---------------------------------------------------------------------------------------------------
+
+
+# Build 'sdist' and 'bdist_wheel' for the beta package
+.PHONY: build-beta-package
+build-beta-package:
+	./scripts/version_manager.py set-beta-build && \
+	./scripts/version_manager.py check && \
+	python setup.py sdist --dist-dir $(BETA_DIST) bdist_wheel --dist-dir $(BETA_DIST) && \
+	./scripts/version_manager.py unset-beta-build && \
+	:
