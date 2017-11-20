@@ -3,6 +3,7 @@
 ########################################################################################################################
 
 BETA_DIST = ./beta_dist
+CLEAN_TARGETS = './.cache ./*.egg-info $(BETA_DIST) $(DIST) ./build ./htmlcov .coverage coverage.xml'
 DIST = ./dist
 GPG_ID = CA0B97334F9449EB5AFFCB93240BD54D194E3161
 
@@ -91,18 +92,9 @@ build-beta: build-pre build-beta-package # Build the beta package
 
 .PHONY: clean
 clean: # Clean up build, test, and other project artifacts
-	rm -rf \
-	./.cache \
-	./*.egg-info \
-	$(DIST) \
-	$(BETA_DIST) \
-	./build \
-	./htmlcov \
-	.coverage \
-	coverage.xml \
-	&& \
-	find . | grep -E "(__pycache__|\.pyc|\.pyo$$)" | xargs rm -rf \
-	&& :
+	rm -rf $(CLEAN_TARGETS) && \
+	find . | grep -E "(__pycache__|\.pyc|\.pyo$$)" | xargs rm -rf && \
+	:
 
 #---------------------------------------------------------------------------------------------------
 # Build Subcommands
