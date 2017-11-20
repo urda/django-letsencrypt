@@ -1,5 +1,15 @@
 # django-letsencrypt CHANGELOG
 
+## v2.0.1
+
+- Internal Changes
+  - Bumped `DJANGO_VERSION` targets in `.travis.yml`.
+  - Bumped to the latest `pytz`, version `2017.3`.
+  - Updated `requirements.txt` to separate requirement needs.
+  - Updated `classifiers` in `setup.py`.
+  - Organized and updated `Makefile` for easier reference and use.
+  - Configured `Makefile` to support uploading to `Test PyPi`.
+
 ## v2.0.0
 
 - Breaking Changes

@@ -1,5 +1,10 @@
-coverage
+# Packages required for the project
+
 Django
-flake8
 pytz
+
+# Packages required when developing the project
+
+coverage
+flake8
 twine
