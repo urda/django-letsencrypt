@@ -3,7 +3,7 @@
 ########################################################################################################################
 
 BETA_DIST = ./beta_dist
-CLEAN_TARGETS = './.cache ./*.egg-info $(BETA_DIST) $(DIST) ./build ./htmlcov .coverage coverage.xml'
+CLEAN_TARGETS = ./.cache ./*.egg-info $(BETA_DIST) $(DIST) ./build ./htmlcov .coverage coverage.xml
 DIST = ./dist
 GPG_ID = CA0B97334F9449EB5AFFCB93240BD54D194E3161
 
