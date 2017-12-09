@@ -14,11 +14,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from django.core.urlresolvers import (
-    reverse,
-    NoReverseMatch,
-)
 from django.db import models
+
+try:
+    from django.urls import (
+        reverse,
+        NoReverseMatch,
+    )
+except ImportError:
+    # < Django 1.10
+    from django.core.urlresolvers import (
+        reverse,
+        NoReverseMatch,
+    )
 
 
 class AcmeChallenge(models.Model):
