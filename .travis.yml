@@ -14,12 +14,21 @@ env:
   - DJANGO_VERSION=1.8.18 DATABASE_ENGINE=mysql
   - DJANGO_VERSION=1.8.18 DATABASE_ENGINE=postgres
   - DJANGO_VERSION=1.8.18 DATABASE_ENGINE=sqlite
-  - DJANGO_VERSION=1.10.8 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=1.10.8 DATABASE_ENGINE=postgres
-  - DJANGO_VERSION=1.10.8 DATABASE_ENGINE=sqlite
-  - DJANGO_VERSION=1.11.7 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=1.11.7 DATABASE_ENGINE=postgres
-  - DJANGO_VERSION=1.11.7 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=1.11.8 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=1.11.8 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=1.11.8 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=2.0 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=2.0 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=2.0 DATABASE_ENGINE=sqlite
+
+matrix:
+  exclude:
+    - python: 2.7
+      env: DJANGO_VERSION=2.0 DATABASE_ENGINE=mysql
+    - python: 2.7
+      env: DJANGO_VERSION=2.0 DATABASE_ENGINE=postgres
+    - python: 2.7
+      env: DJANGO_VERSION=2.0 DATABASE_ENGINE=sqlite
 
 branches:
   only:
@@ -37,8 +46,8 @@ before_install:
 
 install:
   - pip install --upgrade pip
-  - pip install -r requirements.txt
   - pip install Django==$DJANGO_VERSION
+  - pip install -r requirements.txt
 
 before_script:
   - sh -c "
