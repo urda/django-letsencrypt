@@ -2,6 +2,13 @@
 
 ## v2.0.2
 
+- Project Changes
+  - Make Travis CI install the proper `django` version first, before installing
+    the rest of `requirements.txt` during building. Thanks to
+    [michael-k](https://github.com/michael-k) for providing a pull request.
+      - [GH-54](https://github.com/urda/django-letsencrypt/pull/54)
+      - [GH-55](https://github.com/urda/django-letsencrypt/pull/55)
+
 ## v2.0.1
 
 - Internal Changes
