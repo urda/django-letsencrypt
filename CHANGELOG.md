@@ -2,6 +2,9 @@
 
 ## v3.0.0
 
+- Breaking Changes
+  - `python2` support has been dropped. `v2.0.1` is the last supported `python2`
+    version for this package.
 - Project Changes
   - Make Travis CI install the proper `django` version first, before installing
     the rest of `requirements.txt` during building. Thanks to
