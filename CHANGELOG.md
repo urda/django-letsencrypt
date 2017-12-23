@@ -8,6 +8,8 @@
     [michael-k](https://github.com/michael-k) for providing a pull request.
       - [GH-54](https://github.com/urda/django-letsencrypt/pull/54)
       - [GH-55](https://github.com/urda/django-letsencrypt/pull/55)
+  - `django` tested version bump.
+    - `1.11.7` to `1.11.8`.
 
 ## v2.0.1
 
