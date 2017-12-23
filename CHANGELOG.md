@@ -2,6 +2,8 @@
 
 ## v3.0.0
 
+- New Features
+  - `django-letsencrypt` now supports `Django 2.0`!
 - Breaking Changes
   - `python2` support has been dropped. `v2.0.1` is the last supported `python2`
     version for this package.

@@ -43,6 +43,7 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
