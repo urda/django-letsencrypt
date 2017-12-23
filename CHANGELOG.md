@@ -1,6 +1,6 @@
 # django-letsencrypt CHANGELOG
 
-## v2.0.2
+## v3.0.0
 
 - Project Changes
   - Make Travis CI install the proper `django` version first, before installing
