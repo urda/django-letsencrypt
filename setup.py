@@ -24,7 +24,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-letsencrypt',
-    version='3.0.0',
+    version='3.0.1',
     packages=['letsencrypt'],
     include_package_data=True,
     license='Apache License, Version 2.0',
