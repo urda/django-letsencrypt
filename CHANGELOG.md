@@ -17,6 +17,8 @@
       - [GH-55](https://github.com/urda/django-letsencrypt/pull/55)
   - `django` tested version bump.
     - `1.11.7` to `1.11.8`.
+  - Added `tox` to the project to test multiple versions of `python` and
+    `django` together.
 
 ## v2.0.1
 
