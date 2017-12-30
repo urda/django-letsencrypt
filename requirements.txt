@@ -7,4 +7,5 @@ pytz
 
 coverage
 flake8
+tox
 twine

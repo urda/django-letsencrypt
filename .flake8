@@ -5,3 +5,4 @@ exclude =
     example_project/manage.py,
     letsencrypt/migrations/*,
     scripts/version_manager.py,
+    .tox/,

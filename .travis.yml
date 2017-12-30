@@ -54,8 +54,10 @@ before_script:
     fi"
 
 script:
-  - make test
   - make version-check
+  - make test-flake
+  - make test-unit
+  - make test-coverage-report
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
