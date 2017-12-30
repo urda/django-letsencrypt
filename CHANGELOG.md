@@ -1,5 +1,14 @@
 # django-letsencrypt CHANGELOG
 
+## v3.0.1
+
+- Project Changes
+  - Disable `universal` wheel creation in `setup.cfg`.
+  - Add a `python_requires` entry into `setup.py`.
+    - You can learn more about this feature by reading
+    [this](https://packaging.python.org/tutorials/distributing-packages/#python-requires)
+    document.
+
 ## v3.0.0
 
 - New Features
