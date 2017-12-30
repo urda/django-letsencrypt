@@ -1,5 +1,25 @@
 # django-letsencrypt CHANGELOG
 
+## v3.0.0
+
+- New Features
+  - `django-letsencrypt` now supports `Django 2.0`!
+- Breaking Changes
+  - `python2` support has been dropped. `v2.0.1` is the last supported `python2`
+    version for this package.
+  - `Django 1.10` support has been dropped. `v2.0.1` is the last supported
+    version for users still on `Django 1.10`.
+- Project Changes
+  - Make Travis CI install the proper `django` version first, before installing
+    the rest of `requirements.txt` during building. Thanks to
+    [michael-k](https://github.com/michael-k) for providing a pull request.
+      - [GH-54](https://github.com/urda/django-letsencrypt/pull/54)
+      - [GH-55](https://github.com/urda/django-letsencrypt/pull/55)
+  - `django` tested version bump.
+    - `1.11.7` to `1.11.8`.
+  - Added `tox` to the project to test multiple versions of `python` and
+    `django` together.
+
 ## v2.0.1
 
 - Internal Changes

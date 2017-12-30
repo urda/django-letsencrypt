@@ -19,4 +19,5 @@ beta_dist/
 .coverage
 
 .cache/
+.tox/
 htmlcov/

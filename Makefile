@@ -25,16 +25,23 @@ help: # Show this help screen
 
 
 .PHONY: test
-test: test-flake test-unit # Run the full testing suite
+test: version-check test-flake test-unit test-coverage-report # Run the full testing suite
 
 
 .PHONY: version-check
 version-check: # Verify the project version string is correct across the project
 	./scripts/version_manager.py check
 
+
 #---------------------------------------------------------------------------------------------------
 # Test Subcommands
 #---------------------------------------------------------------------------------------------------
+
+
+# Report test coverage after tests are complete
+.PHONY: test-coverage-report
+test-coverage-report:
+	coverage report
 
 
 # Run flake8 against project files
@@ -43,10 +50,17 @@ test-flake:
 	flake8 -v
 
 
+# Tox testing requires coverage to "append" results
+.PHONY: test-tox
+test-tox: COV-ARGS = --append
+test-tox: test-unit
+
+
 # Run only unit tests
 .PHONY: test-unit
 test-unit:
 	coverage run \
+	${COV-ARGS} \
 	--source="./letsencrypt" \
 	--omit="\
 	./letsencrypt/migrations/*,\
@@ -57,7 +71,6 @@ test-unit:
 	" \
 	example_project/manage.py test \
 	--settings=example_project.settings_test \
-	&& coverage report
 
 
 ########################################################################################################################
