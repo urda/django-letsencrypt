@@ -8,7 +8,7 @@ Let's Encrypt App for Django
    :target: https://codecov.io/gh/urda/django-letsencrypt/branch/master
 
 :code:`django-letsencrypt` will allow you to add, remove, and update any
-`ACME challenge <https://letsencrypt.github.io/acme-spec/>`_ objects you may
+`ACME challenge <https://tools.ietf.org/html/draft-ietf-acme-acme/>`_ objects you may
 need through your Django admin interface. Simply add the :code:`ACME challenge`
 and :code:`response` for your app to serve up the necessary information for
 `Let\'s Encrypt <https://letsencrypt.org/how-it-works/>`_ validation.
