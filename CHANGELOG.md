@@ -2,12 +2,16 @@
 
 ## v3.0.1
 
+- Documentation Changes
+  - Update the `ACME challenge` link in `README.rst`.
 - Project Changes
   - Disable `universal` wheel creation in `setup.cfg`.
   - Add a `python_requires` entry into `setup.py`.
     - You can learn more about this feature by reading
     [this](https://packaging.python.org/tutorials/distributing-packages/#python-requires)
     document.
+- Thanks to Contributors:
+  - [Paolo Dina](https://github.com/paolodina)
 
 ## v3.0.0
 
