@@ -15,20 +15,10 @@ limitations under the License.
 """
 
 from django.db import models
-
-try:
-    from django.urls import (
-        reverse,
-        NoReverseMatch,
-    )
-except ImportError:
-    # Django versions prior to 2.0 use the following:
-
-    # noinspection PyUnresolvedReferences
-    from django.core.urlresolvers import (
-        reverse,
-        NoReverseMatch,
-    )
+from django.urls import (
+    reverse,
+    NoReverseMatch,
+)
 
 
 class AcmeChallenge(models.Model):
