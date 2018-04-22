@@ -1,5 +1,5 @@
 """
-Copyright 2016-2017 Peter Urda
+Copyright 2016-2018 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,31 +17,32 @@ limitations under the License.
 import os
 from setuptools import setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
 
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-letsencrypt',
-    version='3.0.0',
+    version='3.0.1',
+    python_requires=">=3.4, <4",
     packages=['letsencrypt'],
     include_package_data=True,
     license='Apache License, Version 2.0',
     description="A simple Django app to handle Let's Encrypt ACME challenges.",
     long_description=README,
+    long_description_content_type='text/markdown',
     url='https://github.com/urda/django-letsencrypt',
     author='Peter Urda',
-    author_email='noreply@urda.cc',
+    author_email='noreply@urda.com',
     install_requires=[
-        "Django>=1.8.18,!=1.9.*,!=1.10.*",
-        "pytz>=2017.3",
+        "Django>=1.11",
+        "pytz>=2018.4",
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',

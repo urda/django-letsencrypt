@@ -1,5 +1,26 @@
 # django-letsencrypt CHANGELOG
 
+## v3.0.1
+
+- Breaking Changes
+  - `Django 1.8` support has been dropped. `v3.0.0` is the last supported
+    version for users still on `Django 1.8`.
+- Documentation Changes
+  - Update the `ACME challenge` link in `README.rst`.
+- Project Changes
+  - Disable `universal` wheel creation in `setup.cfg`.
+  - Add a `python_requires` entry into `setup.py`.
+    - You can learn more about this feature by reading
+    [this](https://packaging.python.org/tutorials/distributing-packages/#python-requires)
+    document.
+  - Bumped to the latest `pytz`, version `2018.4`.
+  - Switched from `reStructuredText` to `Markdown`.
+- Internal Changes
+  - Bumped `DJANGO_VERSION` targets in `.travis.yml`.
+- Thanks to Contributors:
+  - [michael-k](https://github.com/michael-k)
+  - [Paolo Dina](https://github.com/paolodina)
+
 ## v3.0.0
 
 - New Features
