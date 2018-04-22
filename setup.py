@@ -1,5 +1,5 @@
 """
-Copyright 2016-2017 Peter Urda
+Copyright 2016-2018 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -35,14 +35,13 @@ setup(
     author='Peter Urda',
     author_email='noreply@urda.cc',
     install_requires=[
-        "Django>=1.8.18,!=1.9.*,!=1.10.*",
+        "Django>=1.11",
         "pytz>=2017.3",
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
