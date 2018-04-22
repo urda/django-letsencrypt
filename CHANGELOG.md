@@ -14,6 +14,8 @@
     [this](https://packaging.python.org/tutorials/distributing-packages/#python-requires)
     document.
   - Bumped to the latest `pytz`, version `2018.4`.
+- Internal Changes
+  - Bumped `DJANGO_VERSION` targets in `.travis.yml`.
 - Thanks to Contributors:
   - [michael-k](https://github.com/michael-k)
   - [Paolo Dina](https://github.com/paolodina)
