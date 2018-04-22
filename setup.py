@@ -31,6 +31,7 @@ setup(
     license='Apache License, Version 2.0',
     description="A simple Django app to handle Let's Encrypt ACME challenges.",
     long_description=README,
+    long_description_content_type='text/markdown',
     url='https://github.com/urda/django-letsencrypt',
     author='Peter Urda',
     author_email='noreply@urda.com',
