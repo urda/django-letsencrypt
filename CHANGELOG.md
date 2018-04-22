@@ -13,6 +13,7 @@
     - You can learn more about this feature by reading
     [this](https://packaging.python.org/tutorials/distributing-packages/#python-requires)
     document.
+  - Bumped to the latest `pytz`, version `2018.4`.
 - Thanks to Contributors:
   - [michael-k](https://github.com/michael-k)
   - [Paolo Dina](https://github.com/paolodina)

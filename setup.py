@@ -36,7 +36,7 @@ setup(
     author_email='noreply@urda.cc',
     install_requires=[
         "Django>=1.11",
-        "pytz>=2017.3",
+        "pytz>=2018.4",
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
