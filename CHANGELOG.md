@@ -2,6 +2,9 @@
 
 ## v3.0.1
 
+- Breaking Changes
+  - `Django 1.8` support has been dropped. `v3.0.0` is the last supported
+    version for users still on `Django 1.8`.
 - Documentation Changes
   - Update the `ACME challenge` link in `README.rst`.
 - Project Changes
@@ -11,6 +14,7 @@
     [this](https://packaging.python.org/tutorials/distributing-packages/#python-requires)
     document.
 - Thanks to Contributors:
+  - [michael-k](https://github.com/michael-k)
   - [Paolo Dina](https://github.com/paolodina)
 
 ## v3.0.0
