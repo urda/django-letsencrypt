@@ -33,7 +33,7 @@ setup(
     long_description=README,
     url='https://github.com/urda/django-letsencrypt',
     author='Peter Urda',
-    author_email='noreply@urda.cc',
+    author_email='noreply@urda.com',
     install_requires=[
         "Django>=1.11",
         "pytz>=2018.4",
