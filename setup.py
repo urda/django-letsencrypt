@@ -36,8 +36,8 @@ setup(
     author='Peter Urda',
     author_email='noreply@urda.com',
     install_requires=[
-        "Django>=1.11",
-        "pytz>=2018.4",
+        "Django>=1.11.16",
+        "pytz>=2018.7",
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -51,7 +51,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3 :: Only',
