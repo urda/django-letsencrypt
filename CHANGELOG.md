@@ -2,6 +2,11 @@
 
 ## v3.1.0
 
+- Project Changes
+  - Update to latest supported `Django` versions across the project:
+    - `1.11.17`
+    - `2.0.9`
+
 ## v3.0.1
 
 - Breaking Changes

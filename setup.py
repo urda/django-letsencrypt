@@ -36,8 +36,8 @@ setup(
     author='Peter Urda',
     author_email='noreply@urda.com',
     install_requires=[
-        "Django>=1.11",
-        "pytz>=2018.4",
+        "Django>=1.11.17",
+        "pytz>=2018.7",
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
