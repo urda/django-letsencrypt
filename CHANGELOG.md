@@ -6,6 +6,13 @@
   - Added support for `Python 3.7`.
   - Upgraded `example_project`'s `requirements.txt` file.
   - Adjusted build steps to account for Python `3.4` compatibility.
+  - Bumped `travis` `DJANGO_VERSION` targets.
+  - Bumped `pyenv` supported python versions.
+  - Bumped `Django` and `pytz` versions in `setup.py`.
+  - Upgraded `tox` to use `Python 3.7`.
+  - Bumped `tox` to use `Python 3.7`.
+  - Bumped `basepython` in `tox` targets.
+  - Added a `python --version` call to `[testenv]` commands.
 
 ## v3.0.1
 
