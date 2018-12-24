@@ -3,6 +3,7 @@
 ## v3.1.0
 
 - Project Changes
+  - Added support for `Python 3.7`.
   - Update to latest supported `Django` versions across the project:
     - `1.11.17`
     - `2.0.9`
