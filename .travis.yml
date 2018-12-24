@@ -1,5 +1,9 @@
 language: python
 
+dist: xenial
+
+sudo: required
+
 services:
   - mysql
   - postgresql
@@ -8,6 +12,7 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
+  - "3.7"
 
 env:
   - DJANGO_VERSION=1.11.17 DATABASE_ENGINE=mysql
@@ -28,6 +33,12 @@ matrix:
     env: DJANGO_VERSION=2.1.4 DATABASE_ENGINE=postgres
   - python: "3.4"
     env: DJANGO_VERSION=2.1.4 DATABASE_ENGINE=sqlite
+  - python: "3.7"
+    env: DJANGO_VERSION=1.11.17 DATABASE_ENGINE=mysql
+  - python: "3.7"
+    env: DJANGO_VERSION=1.11.17 DATABASE_ENGINE=postgres
+  - python: "3.7"
+    env: DJANGO_VERSION=1.11.17 DATABASE_ENGINE=sqlite
 
 branches:
   only:

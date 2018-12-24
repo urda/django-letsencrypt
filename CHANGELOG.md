@@ -3,6 +3,7 @@
 ## v3.1.0
 
 - Project Changes
+  - Added support for `Python 3.7`.
   - Upgraded `example_project`'s `requirements.txt` file.
   - Adjusted build steps to account for Python `3.4` compatibility.
 
