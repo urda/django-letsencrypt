@@ -8,6 +8,32 @@ need through your Django admin interface. Simply add the `ACME challenge`
 and `response` for your app to serve up the necessary information for
 [Let's Encrypt](https://letsencrypt.org/how-it-works/) validation.
 
+This project strives to make installation, configuration, and usage a snap!
+From high levels of code coverage, multiple compatible python versions, multiple
+versions of Django supported, even multiple databases too!
+
+And of course all wrapped up and published to
+[PyPI](https://pypi.org/project/django-letsencrypt/) for standard installation!
+
+## Supported Configurations
+
+`django-letsencrypt` is tested across a number of configurations, here's what's
+supported so far:
+
+- Python Versions Supported:
+  - `3.7`
+  - `3.6`
+  - `3.5`
+  - `3.4`
+- Django Versions Supported:
+  - `2.1` [(Note: `2.1` is not compatible with Python `3.4`)](https://docs.djangoproject.com/en/2.1/faq/install/#what-python-version-can-i-use-with-django)
+  - `2.0`
+  - `1.11`
+- Databases Supported:
+  - `mysql`
+  - `postgres`
+  - `sqlite`
+
 ## Installation & Configuration
 
 1. `pip install django-letsencrypt`
