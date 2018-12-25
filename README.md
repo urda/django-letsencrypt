@@ -68,3 +68,11 @@ url(r'^\.well-known/', include('letsencrypt.urls'))
 ```
 
 7. Enjoy your easy to manage `ACME Challenges` inside your Django project!
+
+## Example Project
+
+If you would like a demo of how to use this application simply clone this project's
+`git` repository from [GitHub](https://github.com/urda/django-letsencrypt),
+take a moment to read the `README.md` file within the `example_project`
+directory, and follow the directions. That will spin up a small sample django
+application already configured for you to try out.
