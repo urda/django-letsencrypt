@@ -1,3 +1,7 @@
+os: linux
+
+dist: xenial
+
 language: python
 
 services:
@@ -5,20 +9,20 @@ services:
   - postgresql
 
 python:
-  - 3.6
-  - 3.7
   - 3.8
+  - 3.7
+  - 3.6
 
 env:
-  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=postgres
-  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=sqlite
-  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=postgres
-  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=sqlite
-  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=postgres
   - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=mysql
 
 branches:
   only:
@@ -53,11 +57,25 @@ before_script:
       psql -c 'create database travis_ci_test;' -U postgres;
     fi"
 
+stages:
+  - "Linting Tests"
+  - test
+  - "Integration Tests"
+
 script:
-  - make version-check
-  - make test-flake
   - make test-unit
   - make test-coverage-report
+
+jobs:
+  include:
+    - stage: "Linting Tests"
+      name: "Version Check"
+      script: make version-check
+    - name: "Flake Check"
+      script: make test-flake
+    - stage: "Integration Tests"
+      name: "Local Integration Tests"
+      script: make test-integration
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
