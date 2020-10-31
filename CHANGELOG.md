@@ -1,5 +1,7 @@
 # django-letsencrypt CHANGELOG
 
+## v4.0.0
+
 ## v3.0.1
 
 - Breaking Changes
