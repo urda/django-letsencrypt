@@ -5,17 +5,20 @@ services:
   - postgresql
 
 python:
-  - 3.4
-  - 3.5
   - 3.6
+  - 3.7
+  - 3.8
 
 env:
-  - DJANGO_VERSION=1.11.12 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=1.11.12 DATABASE_ENGINE=postgres
-  - DJANGO_VERSION=1.11.12 DATABASE_ENGINE=sqlite
-  - DJANGO_VERSION=2.0.4 DATABASE_ENGINE=mysql
-  - DJANGO_VERSION=2.0.4 DATABASE_ENGINE=postgres
-  - DJANGO_VERSION=2.0.4 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=2.2.16 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=3.0.10 DATABASE_ENGINE=sqlite
+  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=mysql
+  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=postgres
+  - DJANGO_VERSION=3.1.2 DATABASE_ENGINE=sqlite
 
 branches:
   only:
@@ -56,20 +59,5 @@ script:
   - make test-unit
   - make test-coverage-report
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
 notifications:
   email: false
-  slack:
-    secure: >
-      IK9eYxJVo807pl9Nx7RLZ/Pic4kNOHWJ8yHF/FUd2hl4lr2DudAofsUZMwSZOPT8xVrTJvYhv6
-      7h88NwfvfEFkKhji6QZ6g5sl2HiyyzE8TYA/RvW8LsBWNwO02czODEKwtNwcGqncsftuCdcuMv
-      CMiwKW55UdvFSfefejTgLC5xQHdvhoku4zUKBQ1Wglv2E0YIzzCwtzLeScdmTsKjieGSX61X/b
-      p/4rosHYXQtLNP5TmUtccFmX0Sm6+SpIThVZznk3wOjWvpjX0yx5EDI9hQLTZHpMeK0JEhjbHj
-      6b5D+srtNlmzRUsiXAcnkzGMzdpXlGUcvPTF1iKM2RfIUAoNTkto2Ae4B3Dwwva93G+SpGqo5y
-      HZIZ7umo00zHyoNVvyQDJt7Ti1hNfXG5Oa5ROJ0Ns3704hH3XGqVG2EElQ7ny92Bp7uOyapiUA
-      jr0hIBL338wOhD8qNCgmKgljxfJ5o3ufqJvFl8ta1hG/+pBe12H/amV+BUua1tmbWnKzPjeaGU
-      /xeGjyHftigNQlTmiaf//yqBJeb5fYnyEmHiVQnSSOLjegvKd2Kp4Ys81cT9OkxonIpDDMKoOt
-      fwUDiNfrfZKz0MLyuglWeX/azKNTDdyzZhPvuPp5kK6KXxXVXVwKZshud8Md1gUHEft1xYuuyJ
-      KwBcCI8JZJkkdUfX8=
