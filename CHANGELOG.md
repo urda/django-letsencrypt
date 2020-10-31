@@ -1,5 +1,32 @@
 # django-letsencrypt CHANGELOG
 
+## v4.0.0
+
+- Breaking Changes
+  - This was made as an overall major version bump due to the drastic supported
+    version changes. However, the project and code mostly remain the same. This
+    version sync allows the project to be easily kept up to date and upgraded.
+  - As per the [Django Project Docs](https://www.djangoproject.com/download/).
+    This project does a major version upgrade to only support:
+    - Release Series `3.1` starting with version `3.1.2`.
+    - Release Series `3.0` starting with version `3.0.10`.
+    - Release Series `2.2 LTS` starting with version `2.2.16`.
+  - This project supports the following python versions:
+    - Python `3.6`
+    - Python `3.7`
+    - Python `3.8`
+  - `pytz>=2020.1` is now required.
+  - Travis Updates:
+    - For the time being, we will continue to use `travis`.
+    - Updated to support target versions as detailed for both Django and Python.
+  - Operational Excellence Changes:
+    - Updated `.python-version` file to latest values.
+    - Dropping `slack` notification (for now).
+    - Updated the `example_project` `requirements.txt` versions.
+  - General Updates:
+    - General `README` updates.
+    - Updated copyright headers.
+
 ## v3.0.1
 
 - Breaking Changes
