@@ -35,7 +35,7 @@ jobs:
       - name: Archive beta package
         uses: actions/upload-artifact@v2
         with:
-          name: package-python-tar-ball
+          name: package-python-tar-ball.tar.gz
           path: beta_dist/django-letsencrypt-*.tar.gz
           if-no-files-found: error
           retention-days: 90
@@ -43,7 +43,7 @@ jobs:
       - name: Archive beta python wheel
         uses: actions/upload-artifact@v2
         with:
-          name: package-python-wheel
+          name: package-python-wheel.whl
           path: beta_dist/django_letsencrypt-*.whl
           if-no-files-found: error
           retention-days: 90
