@@ -23,18 +23,22 @@ TEST_DATABASES = {
     'mysql': {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'travis_ci_test',
+            'NAME': 'gh_actions_test',
             'USER': 'root',
-            'HOST': 'localhost',
+            'PASSWORD': 'root',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
         },
     },
 
     'postgres': {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'travis_ci_test',
+            'NAME': 'gh_actions_test',
             'USER': 'postgres',
-            'HOST': 'localhost',
+            'PASSWORD': 'postgres',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
         },
     },
 

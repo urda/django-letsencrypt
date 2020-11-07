@@ -1,6 +1,9 @@
 # Let's Encrypt App for Django
 
-[![Travis Build Status (Master)](https://travis-ci.com/urda/django-letsencrypt.svg?branch=master)](https://travis-ci.com/urda/django-letsencrypt) [![Codecov Status (Master)](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/master)
+| Branch | Linting | Testing | Codecov |
+| --- | --- | --- | --- |
+| `master` | ![Linting Checks - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=master) | ![Testing - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Testing/badge.svg?branch=master) | [![Codecov - Master Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/master) |
+| `develop` | ![Linting Checks - Develop Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=develop) | ![Testing - Develop Branch](https://github.com/urda/django-letsencrypt/workflows/Testing/badge.svg?branch=develop) | [![Codecov - Develop Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/develop/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/develop) |
 
 `django-letsencrypt` will allow you to add, remove, and update any
 [ACME challenge](https://github.com/ietf-wg-acme/acme/) objects you may
