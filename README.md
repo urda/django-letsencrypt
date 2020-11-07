@@ -1,9 +1,10 @@
 # Let's Encrypt App for Django
 
-| Branch    | Linting                                                                                                                            | Testing                                                                                                                            | Codecov                                                                                                                                                                   |
-| :-------- | :--------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `master`  | ![Linting Checks - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=master)   | ![Testing - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Comprehensive%20Testing/badge.svg?branch=master)   | [![Codecov - Master Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/master)    |
-| `develop` | ![Linting Checks - Develop Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=develop) | ![Testing - Develop Branch](https://github.com/urda/django-letsencrypt/workflows/Comprehensive%20Testing/badge.svg?branch=develop) | [![Codecov - Develop Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/develop/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/develop) |
+![Linting Checks - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=master)
+
+![Testing - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Comprehensive%20Testing/badge.svg?branch=master)
+
+[![Codecov - Master Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/master)
 
 `django-letsencrypt` will allow you to add, remove, and update any
 [ACME challenge](https://github.com/ietf-wg-acme/acme/) objects you may

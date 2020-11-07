@@ -4,7 +4,7 @@ name: Package Building
 on:
   push:
     branches:
-      - develop
+      - master
 
 
 jobs:
