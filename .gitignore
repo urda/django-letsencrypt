@@ -5,6 +5,7 @@ example_project/db.sqlite3
 
 ### Python ###
 __pycache__/
+.pytest_cache/
 *.py[cod]
 
 # Packaging

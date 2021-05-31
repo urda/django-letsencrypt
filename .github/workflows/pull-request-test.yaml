@@ -14,11 +14,11 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.8
+          - 3.9
         django-version:
-          - 3.1.3
-          - 3.0.11
-          - 2.2.17
+          - 3.2.3
+          - 3.1.11
+          - 2.2.23
         database-version:
           - sqlite
 
