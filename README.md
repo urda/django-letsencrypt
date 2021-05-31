@@ -25,13 +25,14 @@ And of course all wrapped up and published to
 supported so far:
 
 - Python Versions Supported:
+  - `3.9`
   - `3.8`
   - `3.7`
   - `3.6`
 - Django Versions Supported:
-  - `3.1` minimum version `3.1.2`
-  - `3.0` minimum version `3.0.10`
-  - `2.2` minimum version `2.2.16`
+  - `3.2` minimum version `3.2.3`
+  - `3.1` minimum version `3.1.11`
+  - `2.2` minimum version `2.2.23`
 - Databases Supported:
   - `mysql`
   - `postgres`
