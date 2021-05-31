@@ -20,3 +20,4 @@ from django.apps import AppConfig
 class LetsEncryptConfig(AppConfig):
     name = 'letsencrypt'
     verbose_name = "Let's Encrypt"
+    default_auto_field = 'django.db.models.AutoField'
