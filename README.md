@@ -1,8 +1,8 @@
 # Let's Encrypt App for Django
 
-![Linting Checks - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=master)
+[![Linting Checks - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml)
 
-![Testing - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Comprehensive%20Testing/badge.svg?branch=master)
+[![Testing - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Comprehensive%20Testing/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing.yaml)
 
 [![Codecov - Master Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/master)
 
