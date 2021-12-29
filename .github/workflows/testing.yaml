@@ -17,14 +17,14 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.10
-          - 3.9
-          - 3.8
-          - 3.7
+          - '3.10.1'
+          - '3.9.9'
+          - '3.8.12'
+          - '3.7.12'
         django-version:
-          - 4.0
-          - 3.2.10
-          - 2.2.25
+          - '4.0'
+          - '3.2.10'
+          - '2.2.25'
 
     env:
       DATABASE_ENGINE: sqlite
@@ -69,14 +69,14 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.10
-          - 3.9
-          - 3.8
-          - 3.7
+          - '3.10.1'
+          - '3.9.9'
+          - '3.8.12'
+          - '3.7.12'
         django-version:
-          - 4.0
-          - 3.2.10
-          - 2.2.25
+          - '4.0'
+          - '3.2.10'
+          - '2.2.25'
 
     env:
       DATABASE_ENGINE: postgres
@@ -137,14 +137,14 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.10
-          - 3.9
-          - 3.8
-          - 3.7
+          - '3.10.1'
+          - '3.9.9'
+          - '3.8.12'
+          - '3.7.12'
         django-version:
-          - 4.0
-          - 3.2.10
-          - 2.2.25
+          - '4.0'
+          - '3.2.10'
+          - '2.2.25'
 
     env:
       DATABASE_ENGINE: mysql
