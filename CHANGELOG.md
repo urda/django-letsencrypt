@@ -1,5 +1,30 @@
 # django-letsencrypt CHANGELOG
 
+## v4.1.0
+
+There are no major project changes or code updates. This release aligns with
+recent Django releases and Python releases.
+
+- Internal Updates:
+  - `urls.url` replaced with `urls.re_path`.
+    - See commit `d8e823ed5d4dac9a8be885b1f616d7425681d7f7`.
+  - Address `models.W042` warning for `letsencrypt.AcmeChallenge`.
+    - See commit `5d644e7e0ec3b5db9e9a28d3b662cc9bab15b188`.
+- Dependency Updates:
+  - `pytz` version `2021.3` or greater now required.
+- Project Updates
+  - Testing and other related automations have moved to GitHub Actions.
+  - Updated `.python-version` file for latest releases.
+- No longer supported:
+  - Python `3.6`.
+  - Travis CI has been dropped from the project.
+- General Updates:
+  - General `README` updates.
+  - Updated copyright headers.
+  - We still try and follow the supported versions as detailed:
+    - [Django supported versions](https://www.djangoproject.com/download/#supported-versions)
+    - [Django supported Python versions](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django)
+
 ## v4.0.0
 
 - Breaking Changes
