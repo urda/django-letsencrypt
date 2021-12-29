@@ -95,8 +95,5 @@ jobs:
       - name: Coverage Report
         run: make test-coverage-report
 
-      - name: Local Integration Testing
-        run: make test-integration
-
       - name: Upload Coverage Report
         uses: codecov/codecov-action@v1
