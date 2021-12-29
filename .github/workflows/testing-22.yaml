@@ -31,6 +31,7 @@ jobs:
 
     services:
       mysql:
+        if: ${{ matrix.database-taget == 'mysql' }}
         image: mysql
         env:
           MYSQL_ROOT_PASSWORD: root
@@ -43,6 +44,7 @@ jobs:
           --health-timeout=5s
           --health-retries=5
       postgres:
+        if: ${{ matrix.database-taget == 'postgres' }}
         image: postgres
         env:
           POSTGRES_USER: postgres
