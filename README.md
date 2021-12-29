@@ -1,11 +1,5 @@
 # Let's Encrypt App for Django
 
-[![Linting Checks - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Linting%20Checks/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml)
-
-[![Testing - Master Branch](https://github.com/urda/django-letsencrypt/workflows/Comprehensive%20Testing/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing.yaml)
-
-[![Codecov - Master Branch](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/urda/django-letsencrypt/branch/master)
-
 `django-letsencrypt` will allow you to add, remove, and update any
 [ACME challenge](https://github.com/ietf-wg-acme/acme/) objects you may
 need through your Django admin interface. Simply add the `ACME challenge`
@@ -36,6 +30,14 @@ supported so far:
   - `mysql`
   - `postgres`
   - `sqlite`
+
+# Recent Build Status Badges
+
+- [![Linting - Master](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml)
+- [![Testing Django 2.2 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-22.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-22.yaml)
+- [![Testing Django 3.2 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-32.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-32.yaml)
+- [![Testing Django 4.0 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-40.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-40.yaml)
+- [![Codecov - Master](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg?token=yn64lBfwZr)](https://codecov.io/gh/urda/django-letsencrypt)
 
 # Installation & Configuration
 
