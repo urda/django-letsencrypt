@@ -27,6 +27,9 @@ help: # Show this help screen
 # Testing
 ########################################################################################################################
 
+.PHONY: run-tox
+run-tox: # Run tox for the project
+	tox
 
 .PHONY: test
 test: version-check test-flake test-unit test-coverage-report # Run the full testing suite
@@ -131,23 +134,13 @@ clean: # Clean up build, test, and other project artifacts
 build-pre: version-check clean test
 
 
-#---------------------------------------------------------------------------------------------------
-# Build Subcommands (PyPi)
-#---------------------------------------------------------------------------------------------------
-
-
-# Build 'sdist' and 'bdist_wheel' for this package
+# Build 'sdist' and 'bdist_wheel' for this package (PyPi)
 .PHONY: build-package
 build-package:
 	python setup.py sdist --dist-dir $(DIST) bdist_wheel --dist-dir $(DIST)
 
 
-#---------------------------------------------------------------------------------------------------
-# Beta Build Subcommands (Test PyPi)
-#---------------------------------------------------------------------------------------------------
-
-
-# Build 'sdist' and 'bdist_wheel' for the beta package
+# Build 'sdist' and 'bdist_wheel' for the beta package (Test PyPi)
 .PHONY: build-beta-package
 build-beta-package:
 	./scripts/version_manager.py set-beta-build && \
