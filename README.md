@@ -25,14 +25,13 @@ And of course all wrapped up and published to
 supported so far:
 
 - Python Versions Supported:
-  - `3.9`
+  - `3.10` (Django `4.0` and `3.2` only)
   - `3.8`
-  - `3.7`
-  - `3.6`
+  - `3.7` (Django `3.2` and `2.2` only)
 - Django Versions Supported:
-  - `3.2` minimum version `3.2.3`
-  - `3.1` minimum version `3.1.11`
-  - `2.2` minimum version `2.2.23`
+  - `4.0` minimum version `4.0`
+  - `3.2` minimum version `3.2.10`
+  - `2.2` minimum version `2.2.25`
 - Databases Supported:
   - `mysql`
   - `postgres`
@@ -56,7 +55,7 @@ INSTALLED_APPS = [
    or where applicable (usually your root `urls.py`).
 
 ```python
-url(r'^\.well-known/', include('letsencrypt.urls'))
+re_path(r'^\.well-known/', include('letsencrypt.urls'))
 ```
 
 4. Run `manage.py migrate` to create the required table for the

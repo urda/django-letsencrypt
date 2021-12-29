@@ -1,5 +1,5 @@
 """
-Copyright 2016-2020 Peter Urda
+Copyright 2016-2021 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,11 +14,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
-
 urlpatterns = [
-    url(r'^acme-challenge/(?P<acme_data>.+)$', views.detail, name='detail'),
+    re_path(
+        r'^acme-challenge/(?P<acme_data>.+)$',
+        views.detail,
+        name='detail',
+    ),
 ]
