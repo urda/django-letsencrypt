@@ -2,10 +2,14 @@
 # Variables
 ########################################################################################################################
 
-BETA_DIST = ./beta_dist
-CLEAN_TARGETS = ./.cache ./*.egg-info $(BETA_DIST) $(DIST) ./build ./htmlcov .coverage coverage.xml
-DIST = ./dist
 GPG_ID = CA0B97334F9449EB5AFFCB93240BD54D194E3161
+
+DIST = ./dist
+BETA_DIST = ./beta_dist
+
+# Composite Variables
+
+CLEAN_TARGETS = ./.cache ./.tox ./*.egg-info ./.pytest_cache $(BETA_DIST) $(DIST) ./build ./htmlcov .coverage coverage.xml
 
 ########################################################################################################################
 # `make help` Needs to be first so it is ran when just `make` is called

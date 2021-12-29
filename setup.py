@@ -1,5 +1,5 @@
 """
-Copyright 2016-2020 Peter Urda
+Copyright 2016-2021 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-letsencrypt',
-    version='4.0.1',
-    python_requires=">=3.6, <4",
+    version='4.1.0',
+    python_requires=">=3.7, <4",
     packages=['letsencrypt'],
     include_package_data=True,
     license='Apache License, Version 2.0',
@@ -34,28 +34,28 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/urda/django-letsencrypt',
     author='Peter Urda',
-    author_email='noreply@urda.com',
+    author_email='foss@urda.engineering',
     install_requires=[
-        "Django>=2.2.23",
-        "pytz>=2021.1",
+        "Django>=2.2.25",
+        "pytz>=2021.3",
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 2.2',
-        'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3 :: Only',
         'Topic :: Internet',
         'Topic :: Internet :: WWW/HTTP',
