@@ -1,4 +1,4 @@
-name: Testing 2.2
+name: Testing 3.2
 
 
 on:
@@ -11,17 +11,18 @@ on:
 
 
 jobs:
-  Django22:
+  Django32:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         python-version:
+          - '3.10.1'
           - '3.9.9'
           - '3.8.12'
           - '3.7.12'
         django-version:
-          - '2.2.25'
+          - '3.2.10'
         database-taget:
           - 'mysql'
           - 'postgres'
