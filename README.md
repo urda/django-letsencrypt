@@ -20,6 +20,7 @@ supported so far:
 
 - Python Versions Supported:
   - `3.10` (Django `4.0` and `3.2` only)
+  - `3.9` (Django `4.0` and `3.2` only)
   - `3.8`
   - `3.7` (Django `3.2` and `2.2` only)
 - Django Versions Supported:
