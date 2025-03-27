@@ -19,14 +19,16 @@ And of course all wrapped up and published to
 supported so far:
 
 - Python Versions Supported:
-  - `3.10` (Django `4.0` and `3.2` only)
-  - `3.9` (Django `4.0` and `3.2` only)
-  - `3.8`
-  - `3.7` (Django `3.2` and `2.2` only)
+  - `3.13` (with Django `5.1`)
+  - `3.12` (with Django `5.1`, `5.0`, `4.2`)
+  - `3.11` (with Django `5.1`, `5.0`, `4.2`)
+  - `3.10` (with Django `5.1`, `5.0`, `4.2`)
+  - `3.9` (with Django `4.2`)
+  - `3.8` (with Django `4.2`)
 - Django Versions Supported:
-  - `4.0` minimum version `4.0`
-  - `3.2` minimum version `3.2.10`
-  - `2.2` minimum version `2.2.25`
+  - `5.1` minimum version `5.1.7`
+  - `5.0` minimum version `5.0.13`
+  - `4.2 LTS` minimum version `4.2.20`
 - Databases Supported:
   - `mysql`
   - `postgres`

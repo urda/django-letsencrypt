@@ -1,5 +1,15 @@
 # django-letsencrypt CHANGELOG
 
+## v5.1.0
+
+There are no major project changes or code updates. This release aligns with
+recent Django releases and Python releases.
+
+- Internal Updates:
+  - Brought `tox` up-to-date with the current supported Django+Python versions.
+- General Updates:
+  - Updated `README` with supported version information.
+
 ## v4.1.0
 
 There are no major project changes or code updates. This release aligns with
