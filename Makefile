@@ -39,6 +39,10 @@ test: version-check test-flake test-unit test-coverage-report # Run the full tes
 version-check: # Verify the project version string is correct across the project
 	./scripts/version_manager.py check
 
+.PHONY: version-check-django
+version-check-django: # Verify the project's Django version
+	python -c 'import django; print(django.VERSION)'
+
 
 #---------------------------------------------------------------------------------------------------
 # Test Subcommands
