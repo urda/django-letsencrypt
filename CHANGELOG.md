@@ -8,6 +8,8 @@ recent Django releases and Python releases.
 - Internal Updates:
   - Brought `tox` up-to-date with the current supported Django+Python versions.
   - Brought GitHub actions up-to-date with the current supported Django+Python versions.
+  - This project will no longer use the "sign" feature of PyPi.
+    - See also: https://blog.pypi.org/posts/2023-05-23-removing-pgp/
 - Dependency Updates:
   - `pytz` version `2025.2` or greater now required.
 - General Updates:

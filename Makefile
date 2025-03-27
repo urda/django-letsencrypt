@@ -2,8 +2,6 @@
 # Variables
 ########################################################################################################################
 
-GPG_ID = CA0B97334F9449EB5AFFCB93240BD54D194E3161
-
 DIST = ./dist
 BETA_DIST = ./beta_dist
 
@@ -100,13 +98,13 @@ test-integration: # Run the integration tests for the project
 
 
 .PHONY: publish
-publish: build # Build, sign, and publish the package to PyPi
-	twine upload --repository pypi --sign --identity $(GPG_ID) $(DIST)/*
+publish: build # Build and publish the package to PyPi
+	twine upload --repository pypi $(DIST)/*
 
 
 .PHONY: test-publish
-test-publish: build-beta # Build, sign, and publish the package to TestPyPi
-	twine upload --repository testpypi --sign --identity $(GPG_ID) $(BETA_DIST)/*
+test-publish: build-beta # Build and publish the package to TestPyPi
+	twine upload --repository testpypi $(BETA_DIST)/*
 
 
 ########################################################################################################################

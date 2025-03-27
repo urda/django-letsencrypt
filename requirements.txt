@@ -8,5 +8,6 @@ pytz
 coverage
 flake8
 pytest
+setuptools
 tox
 twine
