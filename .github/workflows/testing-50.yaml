@@ -1,4 +1,4 @@
-name: Testing Django 3.2
+name: Testing Django 5.0
 
 
 on:
@@ -11,18 +11,17 @@ on:
 
 
 jobs:
-  Django32:
+  Django50:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         python-version:
-          - '3.10.1'
-          - '3.9.9'
-          - '3.8.12'
-          - '3.7.12'
+          - '3.12.9'
+          - '3.11.11'
+          - '3.10.16'
         django-version:
-          - '3.2.10'
+          - '5.0.13'
         database-taget:
           - 'mysql'
           - 'postgres'

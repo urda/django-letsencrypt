@@ -1,4 +1,4 @@
-name: Testing Django 2.2
+name: Testing Django 5.1
 
 
 on:
@@ -11,17 +11,18 @@ on:
 
 
 jobs:
-  Django22:
+  Django51:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         python-version:
-          - '3.9.9'
-          - '3.8.12'
-          - '3.7.12'
+          - '3.13.2'
+          - '3.12.9'
+          - '3.11.11'
+          - '3.10.16'
         django-version:
-          - '2.2.25'
+          - '5.1.7'
         database-taget:
           - 'mysql'
           - 'postgres'

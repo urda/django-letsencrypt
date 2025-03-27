@@ -37,9 +37,9 @@ supported so far:
 # Recent Build Status Badges
 
 - [![Linting - Master](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml)
-- [![Testing Django 2.2 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-22.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-22.yaml)
-- [![Testing Django 3.2 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-32.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-32.yaml)
 - [![Testing Django 4.0 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-40.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-40.yaml)
+- [![Testing Django 5.0 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-50.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-50.yaml)
+- [![Testing Django 5.1 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-51.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-51.yaml)
 - [![Codecov - Master](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg?token=yn64lBfwZr)](https://codecov.io/gh/urda/django-letsencrypt)
 
 # Installation & Configuration
