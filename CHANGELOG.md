@@ -8,6 +8,8 @@ recent Django releases and Python releases.
 - Internal Updates:
   - Brought `tox` up-to-date with the current supported Django+Python versions.
   - Brought GitHub actions up-to-date with the current supported Django+Python versions.
+- Dependency Updates:
+  - `pytz` version `2025.2` or greater now required.
 - General Updates:
   - Updated `README` with supported version information.
 
