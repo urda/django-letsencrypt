@@ -21,7 +21,7 @@ jobs:
           - '3.11.11'
           - '3.10.16'
           - '3.9.21'
-          - '3.8.20'
+          - '3.8.18'  # At time of update, GitHub max version was this.
         django-version:
           - '4.2.20'
         database-taget:
