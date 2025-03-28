@@ -1,5 +1,10 @@
 # django-letsencrypt CHANGELOG
 
+## v5.1.1
+
+There are no major project changes or code updates.
+This release aligns with recent Django releases and Python releases.
+
 ## v5.1.0
 
 There are no major project changes or code updates. This release aligns with
