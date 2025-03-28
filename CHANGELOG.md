@@ -7,6 +7,7 @@ This release aligns with recent Django releases and Python releases.
 
 - Internal Updates:
   - Updated `actions/checkout@v2` references to `actions/checkout@v4`.
+  - Updated `actions/setup-python@v2` references to `actions/setup-python@v5`.
 - General Updates:
   - Updated `setup.py` to include missing classifiers.
   - Updated link in `README` to point to actual [RFC 8555](https://datatracker.ietf.org/doc/html/rfc8555).
