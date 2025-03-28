@@ -1,5 +1,17 @@
 # django-letsencrypt CHANGELOG
 
+## v5.1.1
+
+There are no major project changes or code updates.
+This release aligns with recent Django releases and Python releases.
+
+- Internal Updates:
+  - Updated `actions/checkout@v2` references to `actions/checkout@v4`.
+  - Updated `actions/setup-python@v2` references to `actions/setup-python@v5`.
+- General Updates:
+  - Updated `setup.py` to include missing classifiers.
+  - Updated link in `README` to point to actual [RFC 8555](https://datatracker.ietf.org/doc/html/rfc8555).
+
 ## v5.1.0
 
 There are no major project changes or code updates. This release aligns with
