@@ -7,6 +7,7 @@ This release aligns with recent Django releases and Python releases.
 
 - General Updates:
   - Updated `setup.py` to include missing classifiers.
+  - Updated link in `README` to point to actual [RFC 8555](https://datatracker.ietf.org/doc/html/rfc8555).
 
 ## v5.1.0
 

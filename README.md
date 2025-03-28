@@ -1,7 +1,7 @@
 # Let's Encrypt App for Django
 
 `django-letsencrypt` will allow you to add, remove, and update any
-[ACME challenge](https://github.com/ietf-wg-acme/acme/) objects you may
+[ACME challenge](https://datatracker.ietf.org/doc/html/rfc8555) objects you may
 need through your Django admin interface. Simply add the `ACME challenge`
 and `response` for your app to serve up the necessary information for
 [Let's Encrypt](https://letsencrypt.org/how-it-works/) validation.
