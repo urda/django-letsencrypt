@@ -5,6 +5,9 @@
 There are no major project changes or code updates.
 This release aligns with recent Django releases and Python releases.
 
+- General Updates:
+  - Updated `setup.py` to include missing classifiers.
+
 ## v5.1.0
 
 There are no major project changes or code updates. This release aligns with
