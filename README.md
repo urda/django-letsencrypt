@@ -1,7 +1,7 @@
 # Let's Encrypt App for Django
 
 `django-letsencrypt` will allow you to add, remove, and update any
-[ACME challenge](https://github.com/ietf-wg-acme/acme/) objects you may
+[ACME challenge](https://datatracker.ietf.org/doc/html/rfc8555) objects you may
 need through your Django admin interface. Simply add the `ACME challenge`
 and `response` for your app to serve up the necessary information for
 [Let's Encrypt](https://letsencrypt.org/how-it-works/) validation.
@@ -13,36 +13,37 @@ versions of Django supported, even multiple databases too!
 And of course all wrapped up and published to
 [PyPI](https://pypi.org/project/django-letsencrypt/) for standard installation!
 
-# Supported Configurations
+## Supported Configurations
 
 `django-letsencrypt` is tested across a number of configurations, here's what's
 supported so far:
 
 - Python Versions Supported:
-  - `3.13` (with Django `5.1`)
-  - `3.12` (with Django `5.1`, `5.0`, `4.2`)
-  - `3.11` (with Django `5.1`, `5.0`, `4.2`)
-  - `3.10` (with Django `5.1`, `5.0`, `4.2`)
+  - `3.14` (with Django `6.0`, `5.2`)
+  - `3.13` (with Django `6.0`, `5.2`)
+  - `3.12` (with Django `6.0`, `5.2`, `4.2`)
+  - `3.11` (with Django `5.2`, `4.2`)
+  - `3.10` (with Django `5.2`, `4.2`)
   - `3.9` (with Django `4.2`)
   - `3.8` (with Django `4.2`)
 - Django Versions Supported:
-  - `5.1` minimum version `5.1.7`
-  - `5.0` minimum version `5.0.13`
-  - `4.2 LTS` minimum version `4.2.20`
+  - `6.0` minimum version `6.0.1`
+  - `5.2 LTS` minimum version `5.2.10`
+  - `4.2 LTS` minimum version `4.2.27`
 - Databases Supported:
   - `mysql`
   - `postgres`
   - `sqlite`
 
-# Recent Build Status Badges
+## Recent Build Status Badges
 
 - [![Linting - Master](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/linting.yaml)
-- [![Testing Django 4.0 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-40.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-40.yaml)
-- [![Testing Django 5.0 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-50.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-50.yaml)
-- [![Testing Django 5.1 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-51.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-51.yaml)
+- [![Testing Django 4.2 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-42.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-42.yaml)
+- [![Testing Django 5.2 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-52.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-52.yaml)
+- [![Testing Django 6.0 - Master](https://github.com/urda/django-letsencrypt/actions/workflows/testing-60.yaml/badge.svg?branch=master)](https://github.com/urda/django-letsencrypt/actions/workflows/testing-60.yaml)
 - [![Codecov - Master](https://codecov.io/gh/urda/django-letsencrypt/branch/master/graph/badge.svg?token=yn64lBfwZr)](https://codecov.io/gh/urda/django-letsencrypt)
 
-# Installation & Configuration
+## Installation & Configuration
 
 1. `pip install django-letsencrypt`
 
@@ -77,7 +78,7 @@ re_path(r'^\.well-known/', include('letsencrypt.urls'))
 
 7. Enjoy your easy to manage `ACME Challenges` inside your Django project!
 
-# Example Project
+## Example Project
 
 If you would like a demo of how to use this application simply clone this project's
 `git` repository from [GitHub](https://github.com/urda/django-letsencrypt),
@@ -85,3 +86,12 @@ take a moment to read the `README.md` file within the
 [`example_project`](https://github.com/urda/django-letsencrypt/tree/master/example_project)
 directory, and follow the directions. That will spin up a small sample django
 application already configured for you to try out.
+
+## Development
+
+1. Make sure you have installed [uv](https://docs.astral.sh/uv/) in your environment.
+2. Clone the repo to your development machine.
+3. Configure your `git` hooks with `git config core.hooksPath .githooks` for the project.
+4. Run `uv sync` to create the virtual environment and install required dependencies.
+5. Run `make test` for a singular test run.
+6. Run `make run-tox` to run the entire `tox` suite.

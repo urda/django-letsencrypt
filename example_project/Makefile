@@ -7,22 +7,22 @@ help: # Show this help screen
 
 .PHONY: create-example-data
 create-example-data: # Create a few example ACME challenges
-	./create_example_data.py
+	uv run ./create_example_data.py
 
 
 .PHONY: createsuperuser
 createsuperuser: # Configure the default admin for the example project
-	./create_superuser.py
+	uv run ./create_superuser.py
 
 
 .PHONY: migrate
 migrate: # Run Django migrations on the example project
-	python manage.py migrate
+	uv run python manage.py migrate
 
 
 .PHONY: run-project
 run-project: # Django runserver for the example project
-	python manage.py runserver
+	uv run python manage.py runserver
 
 
 .PHONY: setup-project

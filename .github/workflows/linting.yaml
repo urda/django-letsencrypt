@@ -17,20 +17,21 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - '3.13.2'
+          - '3.14.2'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
+
+      - name: Install the latest version of `uv`
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: "auto"
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip wheel
-          pip install -r requirements.txt
+        run: uv sync
 
       - name: Flake Check
         run: make test-flake
@@ -42,20 +43,21 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - '3.13.2'
+          - '3.14.2'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
+
+      - name: Install the latest version of `uv`
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: "auto"
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip wheel
-          pip install -r requirements.txt
+        run: uv sync
 
       - name: Version Check
         run: make version-check

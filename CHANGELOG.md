@@ -1,5 +1,33 @@
 # django-letsencrypt CHANGELOG
 
+## v6.0.0
+
+This release aligns with recent Django releases and Python releases.
+
+- Breaking Changes:
+  - Dropped support for Django `5.0` and `5.1`.
+- New Support:
+  - Added support for Django `6.0` (minimum version `6.0.1`).
+  - Added support for Django `5.2 LTS` (minimum version `5.2.10`).
+  - Updated Django `4.2 LTS` minimum version to `4.2.27`.
+  - Added support for Python `3.13` and `3.14`.
+- Internal Updates:
+  - Migrated the project to use `uv` throughout.
+  - Replaced `setup.py`, `setup.cfg`, and `requirements.txt` with `pyproject.toml`.
+  - Removed `.python-version` file.
+  - Added `uv.lock` for pinned dependency resolution.
+  - Removed legacy `requirements.txt` files from the root and `example_project`.
+  - Updated the `example_project` Makefile and local integration script to use `uv`.
+  - Added `.githooks/pre-commit` to run `make test`.
+  - Build system now uses `uv build` instead of `python setup.py`.
+  - Updated `actions/checkout@v2` references to `actions/checkout@v6`.
+  - Renamed GitHub Actions workflows to match supported Django versions (`testing-42.yaml`, `testing-52.yaml`, `testing-60.yaml`).
+  - Updated `tox.ini` to test against Django `4.2`, `5.2`, and `6.0`.
+- General Updates:
+  - Added `Development` section to `README` with `uv` setup instructions.
+  - Updated `pyproject.toml` to include missing classifiers.
+  - Updated link in `README` to point to actual [RFC 8555](https://datatracker.ietf.org/doc/html/rfc8555).
+
 ## v5.1.0
 
 There are no major project changes or code updates. This release aligns with

@@ -27,7 +27,7 @@ help: # Show this help screen
 
 .PHONY: run-tox
 run-tox: # Run tox for the project
-	tox
+	@uv run tox
 
 .PHONY: test
 test: version-check test-flake test-unit test-coverage-report # Run the full testing suite
@@ -35,11 +35,11 @@ test: version-check test-flake test-unit test-coverage-report # Run the full tes
 
 .PHONY: version-check
 version-check: # Verify the project version string is correct across the project
-	./scripts/version_manager.py check
+	@uv run ./scripts/version_manager.py check
 
 .PHONY: version-check-django
 version-check-django: # Verify the project's Django version
-	python -c 'import django; print(django.VERSION)'
+	@uv run python -c 'import django; print(django.VERSION)'
 
 
 #---------------------------------------------------------------------------------------------------
@@ -50,13 +50,13 @@ version-check-django: # Verify the project's Django version
 # Report test coverage after tests are complete
 .PHONY: test-coverage-report
 test-coverage-report:
-	coverage report
+	@uv run coverage report
 
 
 # Run flake8 against project files
 .PHONY: test-flake
 test-flake:
-	flake8 -v
+	@uv run flake8 -v
 
 
 # Tox testing requires coverage to "append" results
@@ -68,7 +68,7 @@ test-tox: test-unit
 # Run only unit tests
 .PHONY: test-unit
 test-unit:
-	coverage run \
+	@uv run coverage run \
 	${COV-ARGS} \
 	--source="./letsencrypt" \
 	--omit="\
@@ -89,7 +89,7 @@ test-unit:
 
 .PHONY: test-integration
 test-integration: # Run the integration tests for the project
-	./scripts/local_integration.sh
+	@./scripts/local_integration.sh
 
 
 ########################################################################################################################
@@ -99,12 +99,12 @@ test-integration: # Run the integration tests for the project
 
 .PHONY: publish
 publish: build # Build and publish the package to PyPi
-	twine upload --repository pypi $(DIST)/*
+	uv run twine upload --repository pypi $(DIST)/*
 
 
 .PHONY: test-publish
 test-publish: build-beta # Build and publish the package to TestPyPi
-	twine upload --repository testpypi $(BETA_DIST)/*
+	uv run twine upload --repository testpypi $(BETA_DIST)/*
 
 
 ########################################################################################################################
@@ -139,14 +139,14 @@ build-pre: version-check clean test
 # Build 'sdist' and 'bdist_wheel' for this package (PyPi)
 .PHONY: build-package
 build-package:
-	python setup.py sdist --dist-dir $(DIST) bdist_wheel --dist-dir $(DIST)
+	uv build --out-dir $(DIST)
 
 
 # Build 'sdist' and 'bdist_wheel' for the beta package (Test PyPi)
 .PHONY: build-beta-package
 build-beta-package:
-	./scripts/version_manager.py set-beta-build && \
-	./scripts/version_manager.py check && \
-	python setup.py sdist --dist-dir $(BETA_DIST) bdist_wheel --dist-dir $(BETA_DIST) && \
-	./scripts/version_manager.py unset-beta-build && \
+	uv run ./scripts/version_manager.py set-beta-build && \
+	uv run ./scripts/version_manager.py check && \
+	uv build --out-dir $(BETA_DIST) && \
+	uv run ./scripts/version_manager.py unset-beta-build && \
 	:

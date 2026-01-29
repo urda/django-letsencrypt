@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright 2017-2020 Peter Urda
+Copyright 2017-2026 Peter Urda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -148,10 +148,10 @@ version_objects = [
         strip_end_chars=2,
     ),
     FileVersionInfo(
-        key_name='setup.py',
-        file_path=join(curr_location, '../setup.py'),
-        magic_line="    version='",
-        strip_end_chars=3,
+        key_name='pyproject.toml',
+        file_path=join(curr_location, '../pyproject.toml'),
+        magic_line="version='",
+        strip_end_chars=2,
     ),
 ]
 

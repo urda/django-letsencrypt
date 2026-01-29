@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name='django-letsencrypt'
+version='6.0.0'
+description="A simple Django app to handle Let's Encrypt ACME challenges."
+readme = 'README.md'
+# Python 3.8 requires old-style license format (PEP 621)
+license = {text = 'Apache-2.0'}
+# Once Python 3.8 support is dropped replace with the following:
+# license = 'Apache-2.0'
+# license-files = ['LICENSE']
+requires-python = '>=3.8,<4'
+authors = [{ name = 'Peter Urda', email = 'foss@urda.engineering' }]
+classifiers = [
+    'Development Status :: 6 - Mature',
+    'Environment :: Web Environment',
+    'Framework :: Django',
+    'Framework :: Django :: 4',
+    'Framework :: Django :: 4.2',
+    'Framework :: Django :: 5',
+    'Framework :: Django :: 5.2',
+    'Framework :: Django :: 6',
+    'Framework :: Django :: 6.0',
+    'Framework :: Flake8',
+    'Framework :: Pytest',
+    'Framework :: tox',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: System Administrators',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    'Programming Language :: Python :: 3 :: Only',
+    'Topic :: Internet',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+    'Topic :: Internet :: WWW/HTTP :: Site Management',
+    'Topic :: Security',
+]
+dependencies = [
+    'Django>=4.2.27',
+    'pytz>=2025.2',
+]
+[project.urls]
+Homepage = 'https://github.com/urda/django-letsencrypt'
+[dependency-groups]
+dev = [
+    'coverage',
+    'flake8',
+    'pytest',
+    'setuptools',
+    'tox',
+    'tox-uv',
+    'twine',
+]
+[tool.setuptools.packages.find]
+include = ['letsencrypt*']
