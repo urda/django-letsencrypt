@@ -27,7 +27,7 @@ help: # Show this help screen
 
 .PHONY: run-tox
 run-tox: # Run tox for the project
-	@uv run tox
+	@uv run tox -p auto
 
 .PHONY: test
 test: version-check test-flake test-unit test-coverage-report # Run the full testing suite
@@ -90,6 +90,16 @@ test-unit:
 .PHONY: test-integration
 test-integration: # Run the integration tests for the project
 	@./scripts/local_integration.sh
+
+
+.PHONY: test-testpypi-integration
+test-testpypi-integration: # Test the deployed test-pypi package (requires VERSION=x.x.x)
+	@./scripts/testpypi_integration.sh $(VERSION)
+
+
+.PHONY: run-tox-testpypi
+run-tox-testpypi: # Run tox test-pypi integration for all versions in parallel (requires VERSION=x.x.x)
+	@TESTPYPI_VERSION=$(VERSION) uv run tox -m testpypi -p all
 
 
 ########################################################################################################################

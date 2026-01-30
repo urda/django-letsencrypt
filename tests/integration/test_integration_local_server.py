@@ -16,6 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
+import os
 import urllib.parse
 import urllib.request
 import urllib.response
@@ -28,7 +29,8 @@ def build_url_for_challenge(base_url: str, challenge: str) -> str:
 
 
 def get_base_url() -> str:
-    return 'http://localhost:8000/.well-known/acme-challenge/'
+    port = os.environ.get('DJANGO_TEST_PORT', '8000')
+    return f'http://localhost:{port}/.well-known/acme-challenge/'
 
 
 @pytest.mark.parametrize("expected_challenge,expected_response", [
