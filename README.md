@@ -24,8 +24,6 @@ supported so far:
   - `3.12` (with Django `6.0`, `5.2`, `4.2`)
   - `3.11` (with Django `5.2`, `4.2`)
   - `3.10` (with Django `5.2`, `4.2`)
-  - `3.9` (with Django `4.2`)
-  - `3.8` (with Django `4.2`)
 - Django Versions Supported:
   - `6.0` minimum version `6.0.1`
   - `5.2 LTS` minimum version `5.2.10`

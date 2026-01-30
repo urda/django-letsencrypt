@@ -7,12 +7,9 @@ name='django-letsencrypt'
 version='6.0.0'
 description="A simple Django app to handle Let's Encrypt ACME challenges."
 readme = 'README.md'
-# Python 3.8 requires old-style license format (PEP 621)
-license = {text = 'Apache-2.0'}
-# Once Python 3.8 support is dropped replace with the following:
-# license = 'Apache-2.0'
-# license-files = ['LICENSE']
-requires-python = '>=3.8,<4'
+license = 'Apache-2.0'
+license-files = ['LICENSE']
+requires-python = '>=3.10,<4'
 authors = [{ name = 'Peter Urda', email = 'foss@urda.engineering' }]
 classifiers = [
     'Development Status :: 6 - Mature',
@@ -34,8 +31,6 @@ classifiers = [
     'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
@@ -52,8 +47,10 @@ dependencies = [
     'Django>=4.2.27',
     'pytz>=2025.2',
 ]
+
 [project.urls]
 Homepage = 'https://github.com/urda/django-letsencrypt'
+
 [dependency-groups]
 dev = [
     'coverage',
@@ -64,5 +61,6 @@ dev = [
     'tox-uv',
     'twine',
 ]
+
 [tool.setuptools.packages.find]
 include = ['letsencrypt*']

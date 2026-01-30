@@ -5,6 +5,7 @@
 This release aligns with recent Django releases and Python releases.
 
 - Breaking Changes:
+  - Dropped support for Python `3.8` and `3.9`.
   - Dropped support for Django `5.0` and `5.1`.
 - New Support:
   - Added support for Django `6.0` (minimum version `6.0.1`).
