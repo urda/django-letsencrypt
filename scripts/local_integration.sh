@@ -17,7 +17,7 @@ popd
 
 echo "${PREFIX} sleeping as server boots..." && sleep 2
 
-uv run pytest -v ./tests/integration/
+uv run pytest -v ./tests/integration/ --junitxml=junit-integration.xml
 
 kill ${SERVER_PID}
 echo "${PREFIX} killed server via PID ${SERVER_PID}"

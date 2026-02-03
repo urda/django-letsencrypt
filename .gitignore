@@ -18,6 +18,9 @@ beta_dist/
 
 # Testing
 .coverage
+coverage.xml
+junit.xml
+junit-integration.xml
 
 .cache/
 .tox/

@@ -24,6 +24,12 @@ This release aligns with recent Django releases and Python releases.
   - Updated `actions/checkout@v2` references to `actions/checkout@v6`.
   - Renamed GitHub Actions workflows to match supported Django versions (`testing-42.yaml`, `testing-52.yaml`, `testing-60.yaml`).
   - Updated `tox.ini` to test against Django `4.2`, `5.2`, and `6.0`.
+  - General `Makefile` refactoring.
+  - Added `scripts/testpypi_integration.sh` for testing deployed Test PyPI packages.
+  - Added Test PyPI integration test matrix to `tox.ini` with parallel execution support.
+  - Migrated unit tests to `pytest` with `pytest-django` and `pytest-cov`.
+  - Added Codecov test results integration via JUnit XML output.
+  - Fixed Codecov coverage upload by generating `coverage.xml` during test runs.
 - General Updates:
   - Added `Development` section to `README` with `uv` setup instructions.
   - Updated `pyproject.toml` to include missing classifiers.

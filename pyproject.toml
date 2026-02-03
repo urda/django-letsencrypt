@@ -56,10 +56,29 @@ dev = [
     'coverage',
     'flake8',
     'pytest',
+    'pytest-cov',
+    'pytest-django',
     'setuptools',
     'tox',
     'tox-uv',
     'twine',
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "example_project.settings_test"
+pythonpath = [".", "example_project"]
+python_files = ["tests.py", "test_*.py", "*_test.py"]
+testpaths = ["letsencrypt", "tests"]
+addopts = "-v"
+
+[tool.coverage.run]
+source = ["letsencrypt"]
+omit = [
+    "letsencrypt/migrations/*",
+    "letsencrypt/admin.py",
+    "letsencrypt/apps.py",
+    "letsencrypt/tests.py",
+    "letsencrypt/urls.py",
 ]
 
 [tool.setuptools.packages.find]
