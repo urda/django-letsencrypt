@@ -91,5 +91,5 @@ application already configured for you to try out.
 2. Clone the repo to your development machine.
 3. Configure your `git` hooks with `git config core.hooksPath .githooks` for the project.
 4. Run `uv sync` to create the virtual environment and install required dependencies.
-5. Run `make test` for a singular test run.
-6. Run `make run-tox` to run the entire `tox` suite.
+5. Run `make test` for the full test suite.
+6. Run `make test-tox` to run the entire `tox` suite.

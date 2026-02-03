@@ -67,7 +67,7 @@ test-flake:
 
 # Tox testing requires coverage to "append" results
 .PHONY: test-tox-entry
-test-tox-entry: COV-ARGS = --append
+test-tox-entry: PYTEST-ARGS = --cov-append
 test-tox-entry: test-unit
 
 # Run only unit tests
