@@ -21,7 +21,7 @@ jobs:
           - '3.13.11'
           - '3.12.12'
         django-version:
-          - '6.0.1'
+          - '6.0.2'
         database-target:
           - 'mysql'
           - 'postgres'

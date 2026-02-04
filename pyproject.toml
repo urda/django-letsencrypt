@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name='django-letsencrypt'
-version='6.0.0'
+version='6.0.1'
 description="A simple Django app to handle Let's Encrypt ACME challenges."
 readme = 'README.md'
 license = 'Apache-2.0'
@@ -44,8 +44,7 @@ classifiers = [
     'Topic :: Security',
 ]
 dependencies = [
-    'Django>=4.2.27',
-    'pytz>=2025.2',
+    'Django>=4.2.28',
 ]
 
 [project.urls]

@@ -25,9 +25,9 @@ supported so far:
   - `3.11` (with Django `5.2`, `4.2`)
   - `3.10` (with Django `5.2`, `4.2`)
 - Django Versions Supported:
-  - `6.0` minimum version `6.0.1`
-  - `5.2 LTS` minimum version `5.2.10`
-  - `4.2 LTS` minimum version `4.2.27`
+  - `6.0` minimum version `6.0.2`
+  - `5.2 LTS` minimum version `5.2.11`
+  - `4.2 LTS` minimum version `4.2.28`
 - Databases Supported:
   - `mysql`
   - `postgres`

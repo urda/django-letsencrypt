@@ -34,7 +34,7 @@ clean: # Clean up build, test, and other project artifacts
 
 .PHONY: version-check
 version-check: # Verify the project version string is correct across the project
-	@uv run ./scripts/version_manager.py check
+	@uv run ./scripts/version_manager.py $(or $(ARGS),check)
 
 .PHONY: version-check-django
 version-check-django: # Verify the project's Django version

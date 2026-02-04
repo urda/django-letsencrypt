@@ -1,5 +1,14 @@
 # django-letsencrypt CHANGELOG
 
+## v6.0.1
+
+There are no major project changes or code updates.
+This release aligns with recent Django releases and Python releases.
+
+- General Updates:
+  - Updated Django target versions against newer releases.
+  - Dropped `pytz` from the project. Projects using Python 3.9 or later are best served by using the timezone functionality now included in core Python and packages that work with it such as tzdata.
+
 ## v6.0.0
 
 This release aligns with recent Django releases and Python releases.

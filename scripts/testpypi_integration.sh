@@ -95,7 +95,7 @@ pip install \
 
 # Show what was installed
 echo "${PREFIX} Installed packages:"
-pip list | grep -E "(django|letsencrypt|pytz)"
+pip list | grep -E "(django|letsencrypt)"
 
 # Navigate to the example project
 cd "${WORK_DIR}/example_project"
