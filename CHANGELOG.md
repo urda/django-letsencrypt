@@ -1,5 +1,13 @@
 # django-letsencrypt CHANGELOG
 
+## v6.0.2
+
+There are no major project changes or code updates.
+This release aligns with recent Django releases and Python releases.
+
+- General Updates:
+  - Updated Django target versions against newer releases.
+
 ## v6.0.1
 
 There are no major project changes or code updates.
